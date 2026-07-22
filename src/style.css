@@ -103,6 +103,38 @@ button, select { font: inherit; }
 }
 .directory-button:hover { transform: translateY(-1px); background: #ccdf00; }
 
+.refresh-data-action { display: grid; gap: 7px; }
+.refresh-data-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.32);
+  border-radius: 9px;
+  background: rgba(255,255,255,.08);
+  font-size: .74rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+.refresh-data-button:hover {
+  transform: translateY(-1px);
+  border-color: var(--cyan);
+  background: rgba(0,159,227,.18);
+}
+.refresh-data-button:focus-visible {
+  outline: 3px solid rgba(188,207,0,.35);
+  outline-offset: 2px;
+}
+.refresh-data-action small {
+  color: rgba(255,255,255,.56);
+  font-size: .61rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
 .sidebar-note { margin-top: auto; padding-top: 28px; color: rgba(255,255,255,.68); }
 .status-row { display: flex; align-items: center; gap: 8px; color: #fff; font-size: .75rem; font-weight: 600; }
 .status-dot { width: 8px; height: 8px; border-radius: 50%; background: #b8c1cd; box-shadow: 0 0 0 4px rgba(255,255,255,.08); }
@@ -252,6 +284,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; max-width: 14
   .filters .section-label { grid-column: 1 / -1; }
   .reset-button { grid-column: 1 / -1; }
   .directory-button { grid-column: 1 / -1; }
+  .refresh-data-action { grid-column: 1 / -1; }
   .sidebar-note { display: grid; grid-template-columns: auto 1fr; column-gap: 10px; padding-top: 18px; }
   .sidebar-note small { margin: 0; }
   .sidebar-note p { display: none; }
@@ -268,6 +301,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; max-width: 14
   .filters { grid-template-columns: 1fr; }
   .filters .section-label, .reset-button { grid-column: auto; }
   .directory-button { grid-column: auto; }
+  .refresh-data-action { grid-column: auto; }
   .hero { align-items: flex-start; flex-direction: column; }
   .hero-identity { align-items: flex-start; flex-direction: column; }
   .hero-logo { width: min(100%, 480px); }

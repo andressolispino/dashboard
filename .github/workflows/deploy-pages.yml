@@ -1,4 +1,5 @@
-name: Publicar dashboard en GitHub Pages
+name: Actualizar dashboard desde Google Sheets
+run-name: Actualizar datos y publicar · ${{ github.event_name }}
 
 on:
   push:

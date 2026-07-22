@@ -53,6 +53,18 @@ app.innerHTML = `
         <button class="directory-button" id="directory-button" type="button">
           <span aria-hidden="true">☷</span> Directorio de prácticas
         </button>
+        <div class="refresh-data-action">
+          <a
+            class="refresh-data-button"
+            href="https://github.com/andressolispino/dashboard/actions/workflows/deploy-pages.yml"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Abrir la actualización manual en GitHub Actions"
+          >
+            <span aria-hidden="true">↻</span> Actualizar datos
+          </a>
+          <small>Lee Google Sheets y publica una versión nueva</small>
+        </div>
       </section>
 
       <div class="sidebar-note">

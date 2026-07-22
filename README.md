@@ -28,6 +28,16 @@ Google Sheets continúa siendo la fuente maestra. Durante la compilación, `scri
 
 El identificador de la hoja se guarda como variable restringida `GOOGLE_SHEET_ID` de GitHub Actions y no se incorpora al sitio. El flujo se ejecuta al actualizar `main`, manualmente y cada lunes.
 
+## Actualización manual desde el dashboard
+
+El botón **Actualizar datos** abre el flujo protegido de GitHub Actions. Una persona con permisos de escritura en el repositorio debe:
+
+1. Iniciar sesión en GitHub.
+2. Pulsar **Run workflow** y confirmar nuevamente **Run workflow**.
+3. Esperar a que finalice la publicación y recargar el dashboard.
+
+La actualización consulta Google Sheets, vuelve a generar únicamente los campos públicos autorizados, ejecuta las pruebas y la auditoría de privacidad, y publica la nueva versión. El dashboard nunca almacena credenciales de GitHub ni expone el identificador de la hoja maestra.
+
 ## Desarrollo local
 
 Requisitos: Node.js 24 y pnpm 11.9.0.
