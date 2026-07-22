@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vite/
+*.log
+*.tsbuildinfo
+.DS_Store
+.env.local
+
+# La fuente original contiene datos personales y no debe publicarse.
+*.xlsx
+*.xls
+public/assets/unicomfacauca-logo.png

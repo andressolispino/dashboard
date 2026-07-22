@@ -1,0 +1,233 @@
+[
+  {
+    "matches": ["FUNDACION UNIVERSITARIA MARIA CANO", "FUNDACION UNIVERSITARIA MARICA CANO", "FUNDACION MARIA CANO", "FUNDACION UNIEVRSITARIA MARIA CANO"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.fumc.edu.co/popayan/",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["EMPAQUES DEL CAUCA"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.empaquesdelcauca.com.co/wp-content/uploads/2021/12/POLITICA-DE-TRATAMIENTO-DE-DATOS-PERSONALES_EMPAQUES-DEL-CAUCA-S.A.-vf.pdf",
+    "status": "Verificada en documento oficial"
+  },
+  {
+    "matches": ["UNICOMFACAUCA", "CORPORACION UNIVERSITARIA COMFACAUCA UNICOMFACAUCA"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.unicomfacauca.edu.co/programa/comunicacion-social-y-periodismo/",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["INDUSTRIA LICORERA DEL CAUCA", "LICORERA DEL CAUCA"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://ilcauca.com/visitanos",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["COMPLEJO CIENTIFICO SENNOVA SENA", "TECNOPARQUE TECNOACADEMIA SENNOVA REGIONAL CAUCA", "TENCNOPARQUE TECNOACADEMIA", "SENA CTPI", "CORPOREDA TECNOPARQUE", "GREENFISH TECNOPARQUE", "TERMINAL DE TRANSPORTES TECNOPARQUE"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.sena.edu.co/es-co/transparencia/rendicionCuentas/Informe%20de%20Rendici%C3%B3n%20de%20Cuentas%20Cauca.pdf",
+    "status": "Verificada en documento oficial"
+  },
+  {
+    "matches": ["INGENIO LA CABANA"],
+    "city": "Guachené",
+    "department": "Cauca",
+    "source": "https://www.ingeniolacabana.com/intranet/2022/index.php/contactenos/",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["LA FRESOTA"],
+    "city": "Paispamba (Sotará)",
+    "department": "Cauca",
+    "source": "https://empresas.larepublica.co/colombia/cauca/sotara-paispamba/fresota-sas-901663559",
+    "status": "Verificada en registro empresarial"
+  },
+  {
+    "matches": ["SURTITELAS"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.waze.com/live-map/directions/co/cauca/popayan/surtitelas-popayan?to=place.ChIJ7Yao0gYQMI4RJnGcKBPAhEU",
+    "status": "Verificada en directorio geográfico"
+  },
+  {
+    "matches": ["CLINICA LA ESTANCIA"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://laestancia.com.co/web/",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["CAFICAUCA", "COOPERATIVA DE CAFICULTORES DEL CAUCA"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://caficauca.com/donde-estamos/",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["EMPRESA DE TELECOMUNICACIONES DE POPAYAN", "EMTEL"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.popayan.gov.co/NuestraAlcaldia/Paginas/Empresa-de-Telecomunicaciones-de-Popayan-Emtel-S-A--E-S-P.aspx",
+    "status": "Verificada en fuente gubernamental"
+  },
+  {
+    "matches": ["CORPORACION AUTONOMA REGIONAL DEL CAUCA CRC"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://ideam.gov.co/transparencia/informacion-de-la-entidad/corporacion-autonoma-regional-del-cauca-crc",
+    "status": "Verificada en fuente gubernamental"
+  },
+  {
+    "matches": ["CENTRO DE DESARROLLO TECNOLOGICO CREATIC"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://cdtcreatic.com/wp-content/uploads/2024/04/CDTPoliticatratamiento/CDT%20Poli%CC%81tica%20de%20tratamiento%20de%20datos%20personales.pdf",
+    "status": "Verificada en documento oficial"
+  },
+  {
+    "matches": ["GIBHOR COMPANY"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://empresite.eleconomistaamerica.co/GIBHOR-COMPANY-SAS.html",
+    "status": "Verificada en registro empresarial"
+  },
+  {
+    "matches": ["EFIGIEGREENENERGY", "EFIGIE GREEN ENERGY"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.efigiegreenenergy.com/formulario-de-cotizaci%C3%B3n",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["DOBLECLICK"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://dobleclick.net.co/index.php/contactenos/",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["URBASER"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://urbaser.co/popayan/",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["COOL TECHNOLOGY"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.paginasamarillas.com.co/empresas/cool-technology-sas/popayan-30229926?ad=50559712",
+    "status": "Verificada en directorio empresarial"
+  },
+  {
+    "matches": ["AEROVISION"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://directoriovirtual3d.com/",
+    "status": "Verificada en directorio empresarial"
+  },
+  {
+    "matches": ["INSTITUCION EDUCATIVA GABRIELA MISTRAL"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://gabrielamistralpopayan.edu.co/contact/",
+    "status": "Verificada en sitio institucional"
+  },
+  {
+    "matches": ["INSTITUCION EDUCATIVA MADRE DE DIOS"],
+    "city": "Piendamó",
+    "department": "Cauca",
+    "source": "https://www.iemadrededios.net/",
+    "status": "Verificada en sitio institucional"
+  },
+  {
+    "matches": ["INSTITUCION EDUCATIVA EFRAIN OROZCO"],
+    "city": "Cajibío",
+    "department": "Cauca",
+    "source": "https://repositorio.unicauca.edu.co/",
+    "status": "Verificada en fuente académica"
+  },
+  {
+    "matches": ["INSTITUCION EDUCATIVA EZEQUIEL HURTADO"],
+    "city": "Silvia",
+    "department": "Cauca",
+    "source": "https://www.infoescuelas.com/colombia/cauca/institucion-educativa-ezequiel-hurtado/",
+    "status": "Verificada en directorio educativo"
+  },
+  {
+    "matches": ["TECNICAFE PARQUE TECNOLOGICO DE INNOVACION DEL CAFE"],
+    "city": "Cajibío",
+    "department": "Cauca",
+    "source": "https://www.tecnicafe.co/wp-content/uploads/2025/07/POLITICA-DE-DATOS-PERSONALES-TECNiCAFE.pdf",
+    "status": "Verificada en documento oficial"
+  },
+  {
+    "matches": ["UNIVERSIDAD DE GUADALAJARA", "UNIVERSIDAD DE GUDALAJARA"],
+    "city": "Guadalajara",
+    "department": "Jalisco, México",
+    "source": "https://transparencia.udg.mx/datos-universidad",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["COMFACAUCA"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.comfacauca.com/sede/sede-administrativa-popayan/",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["ICOBANDAS"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://icobandas.com.co/contactanos",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["DIAGNOSTICENTRO AUTOMOTOR DEL CAUCA", "CDA LA SEXTA"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://mintransporte.gov.co/loader.php?idFile=13756&lFuncion=exposeDocument&lServicio=Tools2&lTipo=descargas",
+    "status": "Verificada en fuente gubernamental"
+  },
+  {
+    "matches": ["TERNIUM COLOMBIA"],
+    "city": "Puerto Tejada",
+    "department": "Cauca",
+    "source": "https://co.ternium.com/media/eznhc2wn/manual-cliente-retira-2025.pdf",
+    "status": "Verificada en documento oficial"
+  },
+  {
+    "matches": ["ASOMEXCARVE ASOCIACION MUNICIPAL DE EXPENDEDORES DE CARNE DEL MUNICIPIO DE LA VEGA"],
+    "city": "La Vega",
+    "department": "Cauca",
+    "source": "Referencia interna de la hoja maestra",
+    "status": "Inferida del nombre registrado; validar"
+  },
+  {
+    "matches": ["ASOCIACION JOVENES CON IDEAS DE PROGRESO CIUDADANO DE LA VEREDA EL ALTILLO MUNICIPIO DE TIMBIO"],
+    "city": "Timbío",
+    "department": "Cauca",
+    "source": "Referencia interna de la hoja maestra",
+    "status": "Inferida del nombre registrado; validar"
+  },
+  {
+    "matches": ["CREACION ZONA FRANCA DEL PATIA"],
+    "city": "El Bordo (Patía)",
+    "department": "Cauca",
+    "source": "Referencia interna de la hoja maestra",
+    "status": "Inferida del nombre registrado; validar"
+  },
+  {
+    "matches": ["EMPRESA DE TELECOMUNICACIONES DE POPAYAN"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.emtel.com.co/?page_id=1937",
+    "status": "Verificada en sitio oficial"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "name": "dashboard-practicas-unicomfacauca",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:public": "tsc -b && vite build --mode github-pages",
+    "preview": "vite preview",
+    "serve:secure": "pnpm build && node --env-file-if-exists=.env.local server.mjs",
+    "test": "vitest run",
+    "audit:public": "node scripts/audit-public-build.mjs",
+    "verify:public": "pnpm test && pnpm build:public && pnpm audit:public",
+    "audit:data": "python scripts/audit_source.py",
+    "generate:fallback": "node --env-file-if-exists=.env.local scripts/generate-fallback.mjs"
+  },
+  "dependencies": {
+    "@fontsource/montserrat": "5.3.0",
+    "echarts": "6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "typescript": "7.0.2",
+    "vite": "8.1.5",
+    "vitest": "4.1.10"
+  }
+}
