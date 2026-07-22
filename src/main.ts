@@ -5,9 +5,10 @@ import "@fontsource/montserrat/latin-700.css";
 import "./style.css";
 
 import { ALL_FILTER, calculateMetrics, filterOptions, filterRecords } from "./analytics";
-import { initializeAdmin } from "./admin";
 import { observeCharts, renderCharts } from "./charts";
 import { loadDataset } from "./data-source";
+import { initializeDirectory } from "./directory";
+import { renderGeographicMap } from "./map";
 import type { DataQuality, FilterState, LoadedDataset } from "./types";
 
 const app = document.querySelector<HTMLDivElement>("#app");
@@ -49,8 +50,8 @@ app.innerHTML = `
         <button class="reset-button" id="reset-filters" type="button">
           <span aria-hidden="true">↺</span> Restablecer filtros
         </button>
-        <button class="admin-button" id="admin-button" type="button">
-          <span aria-hidden="true">▣</span> Modo administrador
+        <button class="directory-button" id="directory-button" type="button">
+          <span aria-hidden="true">☷</span> Directorio de prácticas
         </button>
       </section>
 
@@ -60,7 +61,7 @@ app.innerHTML = `
           <span id="source-status">Conectando con Google Sheets…</span>
         </div>
         <small id="sync-time">Preparando información</small>
-        <p>Vista analítica sin nombres, teléfonos, correos ni tutores empresariales.</p>
+        <p>Consulta académica con nombres. Sin correos, teléfonos, celulares ni datos de contacto.</p>
       </div>
     </aside>
 
@@ -148,11 +149,13 @@ app.innerHTML = `
           <div class="chart chart-medium" data-chart="continuity" role="img" aria-label="Organizaciones nuevas y recurrentes por semestre"></div>
         </article>
 
-        <article class="panel">
+        <article class="panel panel-wide panel-map">
           <div class="panel-heading">
-            <div><span>Alcance territorial</span><h2>Prácticas por ciudad</h2></div>
+            <div><span>Alcance territorial</span><h2>Mapa de ubicación de prácticas</h2></div>
+            <small>Seleccione un punto para filtrar por ciudad</small>
           </div>
-          <div class="chart chart-medium" data-chart="geography" role="img" aria-label="Prácticas por ciudad y departamento"></div>
+          <div class="geo-map" id="geo-map" role="img" aria-label="Mapa geográfico de prácticas por ciudad"></div>
+          <div class="geo-map-summary" id="geo-map-summary" aria-label="Resumen de ciudades"></div>
         </article>
 
         <article class="panel quality-panel">
@@ -173,7 +176,7 @@ app.innerHTML = `
 
       <footer>
         <span>Dashboard de Prácticas Empresariales · Unicomfacauca</span>
-        <span>Datos agregados · Sin información personal en pantalla</span>
+        <span>Directorio académico · Sin correos, teléfonos ni celulares</span>
       </footer>
     </main>
   </div>
@@ -182,53 +185,52 @@ app.innerHTML = `
     <strong>Preparando la historia de las prácticas</strong>
     <small>Normalizando semestres, fechas y organizaciones…</small>
   </div>
-  <dialog class="admin-dialog" id="admin-dialog" aria-labelledby="admin-title">
-    <div class="admin-shell">
-      <header class="admin-header">
+  <dialog class="directory-dialog" id="directory-dialog" aria-labelledby="directory-title">
+    <div class="directory-shell">
+      <header class="directory-header">
         <div>
-          <span>Acceso institucional protegido</span>
-          <h2 id="admin-title">Modo administrador</h2>
+          <span>Consulta académica pública</span>
+          <h2 id="directory-title">Directorio de prácticas</h2>
         </div>
-        <button class="dialog-close" id="admin-close" type="button" aria-label="Cerrar">×</button>
+        <button class="dialog-close" id="directory-close" type="button" aria-label="Cerrar">×</button>
       </header>
 
-      <section class="admin-message" id="admin-loading">
-        <strong>Verificando acceso…</strong>
-        <p>La información personal solo se solicita después de validar la sesión.</p>
-      </section>
-
-      <section class="admin-message" id="admin-unavailable" hidden>
-        <strong>El servidor seguro no está activo</strong>
-        <p>Inicie el proyecto con <code>pnpm run serve:secure</code> y configure una contraseña en <code>.env.local</code>. Esta función no se habilita en una publicación estática de GitHub Pages.</p>
-      </section>
-
-      <form class="admin-login" id="admin-login" hidden>
-        <label for="admin-password">Contraseña de administrador</label>
-        <div class="admin-login-row">
-          <input id="admin-password" name="password" type="password" minlength="12" maxlength="256" autocomplete="current-password" required />
-          <button type="submit">Ingresar</button>
+      <section class="directory-data">
+        <div class="directory-notice">
+          <strong>Información publicada sin datos de contacto</strong>
+          <span>Incluye nombres, proyectos, organizaciones y tutores. No contiene correos, teléfonos ni celulares.</span>
         </div>
-        <p id="admin-error" role="alert"></p>
-        <small>La contraseña se valida en el servidor; nunca queda incluida en el código del dashboard.</small>
-      </form>
-
-      <section class="admin-data" id="admin-data" hidden>
-        <div class="admin-toolbar">
+        <div class="directory-toolbar">
           <label>
-            <span>Buscar estudiante, proyecto u organización</span>
-            <input id="admin-search" type="search" placeholder="Escriba para filtrar…" />
+            <span>Buscar estudiante, proyecto, tutor u organización</span>
+            <input id="directory-search" type="search" placeholder="Escriba para filtrar…" autocomplete="off" />
           </label>
           <label>
             <span>Semestre</span>
-            <select id="admin-semester"></select>
+            <select id="directory-semester"></select>
           </label>
-          <button class="admin-logout" id="admin-logout" type="button">Cerrar sesión</button>
+          <label>
+            <span>Ciudad</span>
+            <select id="directory-city"></select>
+          </label>
         </div>
-        <div class="admin-result-line"><strong id="admin-count">0 registros</strong><span>Información de consulta; las correcciones se realizan en Google Sheets.</span></div>
-        <div class="admin-table-wrap">
-          <table class="admin-table">
-            <thead id="admin-table-head"></thead>
-            <tbody id="admin-table-body"></tbody>
+        <div class="directory-result-line">
+          <strong id="directory-count">0 registros</strong>
+          <span id="directory-updated"></span>
+        </div>
+        <div class="directory-table-wrap">
+          <table class="directory-table">
+            <thead>
+              <tr>
+                <th scope="col">Estudiante</th>
+                <th scope="col">Semestre</th>
+                <th scope="col">Organización</th>
+                <th scope="col">Proyecto o actividad</th>
+                <th scope="col">Tutor empresarial</th>
+                <th scope="col">Ubicación</th>
+              </tr>
+            </thead>
+            <tbody id="directory-table-body"></tbody>
           </table>
         </div>
       </section>
@@ -313,8 +315,8 @@ function render() {
     semester: (value) => updateFilter("semester", value),
     company: (value) => updateFilter("companyKey", value),
     theme: (value) => updateFilter("theme", value),
-    city: (value) => updateFilter("city", value),
   });
+  renderGeographicMap(filtered, (value) => updateFilter("city", value));
 }
 
 function updateFilter(key: keyof FilterState, value: string) {
@@ -361,7 +363,7 @@ function bindControls() {
 }
 
 async function start() {
-  initializeAdmin();
+  initializeDirectory();
   dataset = await loadDataset();
   globalQuality = calculateMetrics(dataset.records).quality;
   const options = filterOptions(dataset.records);

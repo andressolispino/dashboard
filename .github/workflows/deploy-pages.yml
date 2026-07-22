@@ -4,6 +4,8 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  schedule:
+    - cron: "15 10 * * 1"
 
 permissions:
   contents: read
@@ -28,6 +30,10 @@ jobs:
           cache: pnpm
       - name: Instalar dependencias verificadas
         run: pnpm install --frozen-lockfile
+      - name: Generar datos públicos sanitizados
+        run: pnpm run generate:public
+        env:
+          GOOGLE_SHEET_ID: ${{ vars.GOOGLE_SHEET_ID }}
       - name: Probar, compilar y auditar
         run: pnpm run verify:public
         env:

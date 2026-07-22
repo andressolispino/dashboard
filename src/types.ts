@@ -32,6 +32,23 @@ export interface FallbackPayload {
   records: Omit<PlacementRecord, "id" | "companyKey" | "semesterOrder">[];
 }
 
+export interface DirectoryRecord {
+  id: string;
+  studentName: string;
+  semester: string;
+  company: string;
+  projectTitle: string;
+  tutorName: string;
+  city: string;
+  department: string;
+  theme: Theme;
+}
+
+export interface DirectoryPayload {
+  generatedAt: string;
+  records: DirectoryRecord[];
+}
+
 export interface LoadedDataset {
   records: PlacementRecord[];
   source: "Google Sheets" | "respaldo local";

@@ -26,7 +26,7 @@ const TEXT = "#29364d";
 const MUTED = "#718096";
 const GRID = "#e8edf4";
 
-type ChartName = "trend" | "companies" | "themes" | "continuity" | "geography";
+type ChartName = "trend" | "companies" | "themes" | "continuity";
 const charts = new Map<ChartName, echarts.ECharts>();
 
 function chart(name: ChartName): echarts.ECharts {
@@ -64,7 +64,6 @@ export function renderCharts(
     semester: (value: string) => void;
     company: (value: string) => void;
     theme: (value: string) => void;
-    city: (value: string) => void;
   },
 ) {
   const trend = chart("trend");
@@ -197,32 +196,6 @@ export function renderCharts(
     if (typeof params.name === "string") handlers.semester(params.name);
   });
 
-  const geography = chart("geography");
-  const geographyData = [...metrics.geographyCounts].reverse();
-  geography.setOption(
-    {
-      tooltip: { ...tooltip(), trigger: "axis" },
-      grid: { left: 8, right: 32, top: 14, bottom: 12, containLabel: true },
-      xAxis: { ...axis(), type: "value", minInterval: 1 },
-      yAxis: { ...axis(), type: "category", data: geographyData.map((item) => item.name), axisLabel: { ...axis().axisLabel, width: 145, overflow: "truncate" } },
-      graphic: geographyData.length ? undefined : [{ type: "text", left: "center", top: "middle", style: { text: "Ubicaciones en proceso de validación", fill: MUTED, font: "12px Montserrat" } }],
-      series: [
-        {
-          type: "bar",
-          data: geographyData.map((item) => item.value),
-          barMaxWidth: 22,
-          itemStyle: { color: "#662483", borderRadius: [0, 7, 7, 0] },
-          label: { show: true, position: "right", color: TEXT, fontWeight: 600 },
-        },
-      ],
-    },
-    true,
-  );
-  geography.off("click");
-  geography.on("click", (params) => {
-    const item = geographyData[params.dataIndex];
-    if (item) handlers.city(item.city);
-  });
 }
 
 const resizeObserver = new ResizeObserver(() => charts.forEach((instance) => instance.resize()));

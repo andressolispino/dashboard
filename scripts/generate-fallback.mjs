@@ -2,7 +2,8 @@ import { writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID || process.env.VITE_GOOGLE_SHEET_ID || "";
-const OUTPUT = resolve(process.cwd(), "src/data/fallback.json");
+const FALLBACK_OUTPUT = resolve(process.cwd(), "src/data/fallback.json");
+const DIRECTORY_OUTPUT = resolve(process.cwd(), "src/data/directory.json");
 
 if (!SHEET_ID) {
   throw new Error("Defina GOOGLE_SHEET_ID o VITE_GOOGLE_SHEET_ID en .env.local.");
@@ -35,6 +36,14 @@ function value(cell) {
   return cell.f ?? cell.v;
 }
 
+function publicText(cell) {
+  return String(value(cell))
+    .replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi, "")
+    .replace(/(?:\+?\d[\d\s().-]{6,}\d)/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function number(cell) {
   const raw = value(cell);
   if (raw === "" || raw === null || raw === undefined) return null;
@@ -59,7 +68,7 @@ function isoDate(cell) {
 const params = new URLSearchParams({
   sheet: "Consolidado",
   headers: "1",
-  tq: "select A,B,D,E,F,G,H,I,M,N,O,P,Q",
+  tq: "select A,B,C,D,E,F,G,H,I,J,M,N,O,P,Q",
   tqx: "out:json",
 });
 const response = await fetch(`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?${params}`);
@@ -68,30 +77,54 @@ const raw = await response.text();
 const payload = JSON.parse(raw.slice(raw.indexOf("{"), raw.lastIndexOf("}") + 1));
 if (payload.status !== "ok" || !payload.table) throw new Error("La respuesta de Google Sheets no contiene una tabla válida.");
 
-const records = payload.table.rows.flatMap((row) => {
+const publicRows = payload.table.rows.flatMap((row, index) => {
   const cells = row.c || [];
-  const startDate = isoDate(cells[4]);
-  const endDate = isoDate(cells[5]);
-  const company = String(value(cells[3])).trim();
-  const recordSemester = semester(cells[2]);
+  const startDate = isoDate(cells[5]);
+  const endDate = isoDate(cells[6]);
+  const company = publicText(cells[4]);
+  const recordSemester = semester(cells[3]);
   if (!company || recordSemester === "Sin semestre") return [];
   const durationDays = startDate && endDate
     ? Math.round((new Date(`${endDate}T00:00:00Z`) - new Date(`${startDate}T00:00:00Z`)) / 86_400_000)
     : null;
+  const projectTitle = publicText(cells[7]);
+  const city = publicText(cells[13]);
+  const department = publicText(cells[14]);
+  const theme = themeFor(projectTitle);
   return [{
-    semester: recordSemester,
-    company,
-    city: String(value(cells[11])).trim(),
-    department: String(value(cells[12])).trim(),
-    startDate,
-    endDate,
-    durationDays,
-    theme: themeFor(value(cells[6])),
-    visitsCompleted: [cells[8], cells[9], cells[10]].filter((cell) => String(value(cell)).trim()).length,
-    reportedPlaced: number(cells[1]),
-    reportedUnplaced: number(cells[0]),
+    aggregate: {
+      semester: recordSemester,
+      company,
+      city,
+      department,
+      startDate,
+      endDate,
+      durationDays,
+      theme,
+      visitsCompleted: [cells[10], cells[11], cells[12]].filter((cell) => String(value(cell)).trim()).length,
+      reportedPlaced: number(cells[1]),
+      reportedUnplaced: number(cells[0]),
+    },
+    directory: {
+      id: `${recordSemester}-${index}`,
+      studentName: publicText(cells[2]),
+      semester: recordSemester,
+      company,
+      projectTitle,
+      tutorName: publicText(cells[9]),
+      city,
+      department,
+      theme,
+    },
   }];
 });
 
-await writeFile(OUTPUT, `${JSON.stringify({ generatedAt: new Date().toISOString(), records }, null, 2)}\n`, "utf8");
-console.log(`Generated ${OUTPUT} with ${records.length} privacy-safe rows from Google Sheets.`);
+const generatedAt = new Date().toISOString();
+const records = publicRows.map((row) => row.aggregate);
+const directoryRecords = publicRows.map((row) => row.directory);
+
+await Promise.all([
+  writeFile(FALLBACK_OUTPUT, `${JSON.stringify({ generatedAt, records }, null, 2)}\n`, "utf8"),
+  writeFile(DIRECTORY_OUTPUT, `${JSON.stringify({ generatedAt, records: directoryRecords }, null, 2)}\n`, "utf8"),
+]);
+console.log(`Generated ${records.length} aggregate rows and ${directoryRecords.length} contact-free directory rows from Google Sheets.`);

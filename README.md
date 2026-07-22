@@ -1,88 +1,60 @@
 # Dashboard de Prácticas Empresariales · Unicomfacauca
 
-Dashboard web responsive para analizar evolución semestral, organizaciones aliadas, áreas de trabajo, duración, continuidad y alcance territorial de las prácticas empresariales.
+Dashboard web estático para consultar la evolución de las prácticas empresariales, organizaciones aliadas, proyectos, continuidad y alcance territorial.
 
-## Privacidad por diseño
+Sitio: <https://andressolispino.github.io/dashboard/>
 
-- La vista pública solo maneja semestre, organización, fechas, proyecto, categoría analítica, ubicación y totales agregados.
-- El respaldo incluido en `src/data/fallback.json` no contiene nombres de estudiantes, tutores, teléfonos ni correos.
-- El Excel original, `.env.local`, `dist` y otras fuentes sensibles están excluidos por `.gitignore`.
-- El proceso de publicación ejecuta una auditoría y falla si detecta hojas de cálculo, archivos de entorno, mapas de código fuente o campos no autorizados en el respaldo.
+## Publicación sin servidor
 
-Importante: no use como fuente pública el archivo maestro que contiene datos personales. Para actualización en vivo desde GitHub Pages se necesita **otro archivo de Google Sheets**, anonimizado y compartido solo para lectura.
+La aplicación funciona completamente en GitHub Pages. No usa contraseñas, sesiones ni un backend propio.
 
-## Ejecutar localmente
+El directorio público contiene exclusivamente:
 
-Requiere Node.js 24 o superior y pnpm 11.9.0.
+- Nombre del estudiante.
+- Semestre.
+- Organización.
+- Proyecto o actividad.
+- Nombre del tutor empresarial, cuando está disponible.
+- Ciudad, departamento y temática.
 
-```bash
-npx pnpm@11.9.0 install --frozen-lockfile
-npx pnpm@11.9.0 dev
-```
+No se publican correos, teléfonos, celulares, horarios, opiniones ni otros datos de contacto. `scripts/audit-public-build.mjs` valida los campos autorizados y bloquea patrones de correo o teléfono antes de cada despliegue.
 
-La configuración local está en `.env.local`, que no se sube al repositorio. En este equipo conserva la conexión directa con la hoja institucional.
+## Fuente de datos
 
-## Verificar la versión publicable
+Google Sheets continúa siendo la fuente maestra. Durante la compilación, `scripts/generate-fallback.mjs` consulta la pestaña `Consolidado` y genera dos archivos sanitizados:
 
-```bash
-npx pnpm@11.9.0 run verify:public
-npx pnpm@11.9.0 preview
-```
+- `src/data/fallback.json`: indicadores y gráficos.
+- `src/data/directory.json`: directorio académico sin contactos.
 
-`verify:public` ejecuta pruebas, compila el sitio y audita el contenido de `dist`.
+El identificador de la hoja se guarda como variable restringida `GOOGLE_SHEET_ID` de GitHub Actions y no se incorpora al sitio. El flujo se ejecuta al actualizar `main`, manualmente y cada lunes.
 
-## Modo administrador local
+## Desarrollo local
 
-GitHub Pages es estático y no puede proteger información personal. Por eso el modo administrador funciona únicamente mediante el servidor local incluido, con contraseña validada en servidor, cookie `HttpOnly`, límite de intentos y sesión temporal.
-
-En `.env.local`, agregue una frase privada de al menos 12 caracteres:
-
-```text
-ADMIN_PASSWORD=una-frase-larga-y-privada
-```
-
-Después ejecute:
+Requisitos: Node.js 24 y pnpm 11.9.0.
 
 ```bash
-npx pnpm@11.9.0 run serve:secure
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-Abra `http://127.0.0.1:4173` y seleccione **Modo administrador**. La contraseña y los datos personales no se incorporan al sitio estático.
-
-## Actualización semestral
-
-1. Agregue los registros en `Consolidado` sin alterar los encabezados.
-2. Use semestre `AAAA-1` o `AAAA-2`.
-3. Registre fechas reales de inicio y finalización.
-4. Diligencie ciudad y departamento en P y Q; R y S conservan la fuente y el estado de validación.
-5. Regenerar el respaldo público:
+Para regenerar los datos desde Sheets, cree `.env.local` a partir de `.env.example` y ejecute:
 
 ```bash
-npx pnpm@11.9.0 run generate:fallback
+pnpm generate:public
 ```
 
-Revise el cambio de `src/data/fallback.json` antes de publicarlo.
+## Verificación
 
-## Publicar en GitHub Pages
+```bash
+pnpm verify:public
+```
 
-El proyecto está preparado, pero este repositorio local **no se ha subido ni publicado**.
+Este comando ejecuta pruebas, compila la versión de GitHub Pages y audita que no se publiquen hojas de cálculo, variables privadas, mapas de código, correos o teléfonos.
 
-1. Cree un repositorio en GitHub y suba los archivos respetando `.gitignore`.
-2. Use `main` como rama principal.
-3. En **Settings → Pages**, seleccione **GitHub Actions**.
-4. Envíe los cambios a `main` o ejecute manualmente **Publicar dashboard en GitHub Pages** desde Actions.
+## Mapa geográfico
 
-El flujo `.github/workflows/deploy-pages.yml` instala las versiones bloqueadas, prueba, compila, audita y publica `dist`. Las rutas son relativas, por lo que funciona tanto en `usuario.github.io` como en `usuario.github.io/nombre-repositorio/`.
+El mapa usa Leaflet y teselas de OpenStreetMap. Los puntos representan centroides de ciudad, no direcciones particulares ni ubicaciones exactas de personas. Al seleccionar un punto se filtra el dashboard por ciudad.
 
-### Conexión pública en vivo opcional
+## Despliegue
 
-Sin configuración adicional, GitHub Pages usa el respaldo agregado incluido: es la opción segura.
-
-Para actualización en vivo:
-
-1. Cree un **archivo de Google Sheets separado** que no contenga ninguna columna personal.
-2. Conserve una pestaña `Consolidado` con las columnas públicas esperadas.
-3. Compártalo como lector para cualquier persona con el enlace.
-4. En **Settings → Secrets and variables → Actions → Variables**, cree `PUBLIC_GOOGLE_SHEET_ID` con el ID de esa hoja anonimizada.
-
-Nunca coloque el ID de la hoja maestra privada en esa variable.
+`.github/workflows/deploy-pages.yml` genera los datos sanitizados, instala dependencias bloqueadas, prueba, compila, audita y publica `dist` en GitHub Pages.
