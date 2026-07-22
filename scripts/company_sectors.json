@@ -1,0 +1,78 @@
+[
+  {
+    "sector": "Educación, ciencia e innovación",
+    "matches": [
+      "FUNDACION UNIVERSITARIA MARIA CANO", "FUNDACION UNIVERSITARIA MARICA CANO", "FUNDACION UNIEVRSITARIA MARIA CANO", "FUNDACION MARIA CANO",
+      "UNICOMFACAUCA", "CORPORACION UNIVERSITARIA COMFACAUCA", "UNIVERSIDAD DE GUADALAJARA", "UNIVERSIDAD DE GUDALAJARA",
+      "SENA CTPI", "SENNOVA", "TECNOPARQUE", "TENCNOPARQUE", "TECNOACADEMIA",
+      "INSTITUCION EDUCATIVA", "IE DON BOSCO", "CORPORACION EDUCATIVA CAMINO A LA EXCELENCIA", "MUNDO DIDACTICO DEL CAUCA"
+    ]
+  },
+  {
+    "sector": "Salud y tecnología biomédica",
+    "matches": [
+      "BIOCRANN IPS", "CLINICA LA ESTANCIA", "CENTRO DE ESPECIALISTA EN SALUD INTEGRAL RENACER", "NOVAMEDICAL",
+      "EMPRESA SOCIAL DEL ESTADO", "ESTADO JOVEN PRACTICAS LABORALES EN EL SECTOR PUBLICO"
+    ]
+  },
+  {
+    "sector": "Industria y manufactura",
+    "matches": [
+      "EMPAQUES DEL CAUCA", "ICOBANDAS", "INDUSTRIA LICORERA DEL CAUCA", "LICORERA DEL CAUCA",
+      "INGENIERIA E INOXIDABLES", "TERNIUM COLOMBIA", "MECANIZAR", "VELAS LA ESPERANZA", "EPI", "SUPER E CIA"
+    ]
+  },
+  {
+    "sector": "Tecnología, ingeniería y automatización",
+    "matches": [
+      "AEROVISION", "AUTOMATIZACION AVANZADA", "CENTRO DE DESARROLLO TECNOLOGICO CREATIC", "COOL TECHNOLOGY",
+      "DOBLECLICK", "ELECTROSISTEMAS DEL CAUCA", "GIBHOR COMPANY", "INDESTES", "IOT TECH SOLUTIONS",
+      "RED F5", "TECHNO SKILLS ENGINEERING SERVICES", "CONVERCAUCA", "BIOESCOL", "DILICCIA OPALSA"
+    ]
+  },
+  {
+    "sector": "Agroindustria y alimentos",
+    "matches": [
+      "ASOMEXCARVE", "ASOPROCAF", "CAFICAUCA", "COOPERATIVA DE CAFICULTORES DEL CAUCA", "DISTRIHUEVOS DIAZ",
+      "EMBOTELLADORA FONTE VIDA", "INGENIO LA CABANA", "LA FRESOTA", "LA ROCHELA", "MR NATURA",
+      "SERVAGRO", "TECNICAFE", "ENERGYDROP"
+    ]
+  },
+  {
+    "sector": "Energía, ambiente y servicios públicos",
+    "matches": [
+      "CORPORACION AUTONOMA REGIONAL DEL CAUCA", "ECOINGENIERIA SOSTENIBLE", "ECOINGENEIRIA SOSTENIBLE",
+      "EFIGIEGREENENERGY", "EMPRESA DE TELECOMUNICACIONES DE POPAYAN", "EMTEL", "URBASER", "SIPCO ZF"
+    ]
+  },
+  {
+    "sector": "Comercio y servicios",
+    "matches": [
+      "COMFACAUCA", "FERRETERIA LA 5TA", "SURTITELAS", "SOLO MOTOS W", "LULANA"
+    ]
+  },
+  {
+    "sector": "Sector público y desarrollo social",
+    "matches": [
+      "ASOCIACION JOVENES CON IDEAS DE PROGRESO", "FUNDACION CAUCA RURAL"
+    ]
+  },
+  {
+    "sector": "Transporte y movilidad",
+    "matches": [
+      "DIAGNOSTICENTRO AUTOMOTOR DEL CAUCA", "CDA LA SEXTA", "TERMINAL DE TRANSPORTES"
+    ]
+  },
+  {
+    "sector": "Consultoría y servicios profesionales",
+    "matches": [
+      "INIZIO", "JPT CONSULTING", "GRUPO CONSULTOR JURIDICO Y EMPRESARIAL"
+    ]
+  },
+  {
+    "sector": "Construcción e infraestructura",
+    "matches": [
+      "CONSORCIO CIACOM", "CREACION ZONA FRANCA DEL PATIA"
+    ]
+  }
+]

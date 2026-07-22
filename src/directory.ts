@@ -42,6 +42,7 @@ export function initializeDirectory() {
   const search = byId<HTMLInputElement>("directory-search");
   const semester = byId<HTMLSelectElement>("directory-semester");
   const city = byId<HTMLSelectElement>("directory-city");
+  const sector = byId<HTMLSelectElement>("directory-sector");
   const body = byId<HTMLTableSectionElement>("directory-table-body");
   const count = byId<HTMLElement>("directory-count");
   const updated = byId<HTMLElement>("directory-updated");
@@ -58,6 +59,12 @@ export function initializeDirectory() {
       a.localeCompare(b, "es"),
     ),
   );
+  addOptions(
+    sector,
+    [...new Set(payload.records.map((record) => record.sector).filter(Boolean))].sort((a, b) =>
+      a.localeCompare(b, "es"),
+    ),
+  );
 
   updated.textContent = `Actualizado ${new Intl.DateTimeFormat("es-CO", {
     dateStyle: "medium",
@@ -68,6 +75,7 @@ export function initializeDirectory() {
     const records = payload.records.filter((record) => {
       const matchesSemester = semester.value === "__all__" || record.semester === semester.value;
       const matchesCity = city.value === "__all__" || record.city === city.value;
+      const matchesSector = sector.value === "__all__" || record.sector === sector.value;
       const haystack = normalize([
         record.studentName,
         record.company,
@@ -76,8 +84,9 @@ export function initializeDirectory() {
         record.city,
         record.department,
         record.theme,
+        record.sector,
       ].join(" "));
-      return matchesSemester && matchesCity && (!query || haystack.includes(query));
+      return matchesSemester && matchesCity && matchesSector && (!query || haystack.includes(query));
     });
 
     const fragment = document.createDocumentFragment();
@@ -89,6 +98,7 @@ export function initializeDirectory() {
         cell(record.company),
         cell(record.projectTitle),
         cell(record.tutorName),
+        cell(record.sector, "Sin clasificar"),
         cell([record.city, record.department].filter(Boolean).join(" · ")),
       );
       fragment.appendChild(row);
@@ -109,5 +119,6 @@ export function initializeDirectory() {
   search.addEventListener("input", renderRows);
   semester.addEventListener("change", renderRows);
   city.addEventListener("change", renderRows);
+  sector.addEventListener("change", renderRows);
   renderRows();
 }

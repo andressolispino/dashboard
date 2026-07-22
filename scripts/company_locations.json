@@ -229,5 +229,131 @@
     "department": "Cauca",
     "source": "https://www.emtel.com.co/?page_id=1937",
     "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["BIOCRANN IPS"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://co.establecimientosdesalud.info/biocrann-49376/",
+    "status": "Verificada en directorio de salud"
+  },
+  {
+    "matches": ["DISTRIHUEVOS DIAZ"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://co.todosnegocios.com/distribuidora-de-huevos-diaz-317-7156740",
+    "status": "Verificada en directorio empresarial"
+  },
+  {
+    "matches": ["ELECTROSISTEMAS DEL CAUCA"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.nexdu.com/co/popayan-cau/empresa/electrosistemas-del-cauca-349352",
+    "status": "Verificada en directorio empresarial"
+  },
+  {
+    "matches": ["EMPRESA SOCIAL DEL ESTADO CENTRO 1", "EMPRESA SOCIAL DEL ESTADO"],
+    "city": "Piendamó",
+    "department": "Cauca",
+    "source": "https://www.cybo.com/CO-biz/ese-centro-sede-administrativa",
+    "status": "Verificada para la sede administrativa de ESE Centro 1"
+  },
+  {
+    "matches": ["SIPCO ZF E S P"],
+    "city": "Villa Rica",
+    "department": "Cauca",
+    "source": "Referencia interna de la hoja maestra",
+    "status": "Completada desde otro registro de la misma organización"
+  },
+  {
+    "matches": ["ENERGYDROPS", "ENERGY DROPS"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "Referencia interna de la hoja maestra",
+    "status": "Completada desde otro registro de la misma organización"
+  },
+  {
+    "matches": ["EPI S A S", "EPI SAS"],
+    "city": "Cali",
+    "department": "Valle del Cauca",
+    "source": "https://episafety.com/",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["FERRETERIA LA 5TA"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://yandex.com/maps/",
+    "status": "Verificada en directorio geográfico"
+  },
+  {
+    "matches": ["AUTOMATIZACION AVANZADA"],
+    "city": "Bogotá",
+    "department": "Bogotá D.C.",
+    "source": "https://automatizacionavanzada.com/",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["IOT TECH SOLUTIONS", "IOT TECH"],
+    "city": "Bogotá",
+    "department": "Bogotá D.C.",
+    "source": "https://iottech.com.co/",
+    "status": "Verificada en sitio oficial"
+  },
+  {
+    "matches": ["GRUPO CONSULTOR JURIDICO Y EMPRESARIAL INIZIO", "INIZIO S A S"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://popayan.cataloxy-co.com/firms/inicio.72860_c.htm",
+    "status": "Verificada en directorio empresarial"
+  },
+  {
+    "matches": ["IE DON BOSCO"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://mapcarta.com/W556761234",
+    "status": "Verificada en directorio geográfico"
+  },
+  {
+    "matches": ["ECOINGENIERIA SOSTENIBLE", "ECOINGENEIRIA SOSTENIBLE", "INGENIERIA E INOXIDABLES"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "Referencia interna de la hoja maestra",
+    "status": "Completada desde otro registro de la misma organización"
+  },
+  {
+    "matches": ["CORPORACION EDUCATIVA CAMINO A LA EXCELENCIA"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://edirectorio.net/empresa/corporacion-educativa-camino-a-la-excelencia",
+    "status": "Verificada en directorio empresarial"
+  },
+  {
+    "matches": ["SERVAGRO"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.nexdu.com/co/popayan-cau",
+    "status": "Verificada en directorio empresarial"
+  },
+  {
+    "matches": ["SOLO MOTOS W", "SOLO MOTOS"],
+    "city": "Popayán",
+    "department": "Cauca",
+    "source": "https://www.paginasamarillas.com.co/empresas/solo-motos",
+    "status": "Verificada en directorio empresarial"
+  },
+  {
+    "matches": ["VELAS LA ESPERANZA", "VELAS Y VELONES LA ESPERANZA"],
+    "city": "Timbío",
+    "department": "Cauca",
+    "source": "https://co.todosnegocios.com/velas-y-velones-la-esperanza",
+    "status": "Verificada en directorio empresarial"
+  },
+  {
+    "matches": ["LA ROCHELA", "AGROINDUSTRIA LA ROCHELA"],
+    "city": "Timbío",
+    "department": "Cauca",
+    "source": "https://connectamericas.com/company/agroindustria-la-rochela-sas",
+    "status": "Verificada en directorio empresarial"
   }
 ]

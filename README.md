@@ -16,6 +16,7 @@ El directorio público contiene exclusivamente:
 - Proyecto o actividad.
 - Nombre del tutor empresarial, cuando está disponible.
 - Ciudad, departamento y temática.
+- Sector económico de la organización.
 
 No se publican correos, teléfonos, celulares, horarios, opiniones ni otros datos de contacto. `scripts/audit-public-build.mjs` valida los campos autorizados y bloquea patrones de correo o teléfono antes de cada despliegue.
 
@@ -27,6 +28,14 @@ Google Sheets continúa siendo la fuente maestra. Durante la compilación, `scri
 - `src/data/directory.json`: directorio académico sin contactos.
 
 El identificador de la hoja se guarda como variable restringida `GOOGLE_SHEET_ID` de GitHub Actions y no se incorpora al sitio. El flujo se ejecuta al actualizar `main`, manualmente y cada lunes.
+
+La hoja `Consolidado` incluye las columnas `SECTOR ECONÓMICO` y `PAÍS`. Los sectores se normalizan mediante `scripts/company_sectors.json`; las ubicaciones verificadas y sus fuentes se documentan en `scripts/company_locations.json`.
+
+## Clasificación de proyectos
+
+Los títulos históricos se agrupan en una taxonomía revisada con asistencia de IA y convertida en reglas reproducibles. Se distinguen automatización, software, producto, mantenimiento, operaciones, gestión, sostenibilidad, tecnología biomédica, educación e ingeniería de soporte. Los títulos vacíos o pendientes se muestran como `Sin información / por definir`.
+
+No se calcula un promedio histórico de horas porque `Consolidado` no contiene una columna estructurada de horas. El dashboard presenta la duración promedio en días calendario a partir de las fechas válidas; incorporar horas exigirá registrar `HORAS SEMANALES` o `HORAS TOTALES` de forma consistente.
 
 ## Actualización manual desde el dashboard
 

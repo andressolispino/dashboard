@@ -6,6 +6,7 @@ type Coordinate = [number, number];
 
 const CITY_COORDINATES: Record<string, Coordinate> = {
   bogota: [4.711, -74.0721],
+  cali: [3.4516, -76.532],
   cajibio: [2.6233, -76.5707],
   "el bordo patia": [2.1156, -76.9825],
   guachene: [3.1337, -76.3925],

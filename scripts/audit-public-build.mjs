@@ -10,6 +10,7 @@ const allowedRecordKeys = new Set([
   "company",
   "city",
   "department",
+  "sector",
   "startDate",
   "endDate",
   "durationDays",
@@ -28,6 +29,7 @@ const allowedDirectoryKeys = new Set([
   "tutorName",
   "city",
   "department",
+  "sector",
   "theme",
 ]);
 const emailPattern = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i;

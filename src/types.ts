@@ -1,11 +1,15 @@
 export const THEMES = [
-  "Automatización y electrónica",
-  "Software y datos",
-  "Diseño y manufactura",
-  "Mantenimiento y operaciones",
-  "Gestión y calidad",
-  "Sostenibilidad",
-  "Otros",
+  "Automatización y control",
+  "Software y transformación digital",
+  "Diseño y desarrollo de producto",
+  "Mantenimiento y confiabilidad",
+  "Operaciones y logística",
+  "Gestión, calidad y seguridad",
+  "Energía y sostenibilidad",
+  "Salud y tecnología biomédica",
+  "Educación e innovación",
+  "Ingeniería y soporte técnico",
+  "Sin información / por definir",
 ] as const;
 
 export type Theme = (typeof THEMES)[number];
@@ -18,6 +22,7 @@ export interface PlacementRecord {
   companyKey: string;
   city: string;
   department: string;
+  sector: string;
   startDate: string | null;
   endDate: string | null;
   durationDays: number | null;
@@ -41,6 +46,7 @@ export interface DirectoryRecord {
   tutorName: string;
   city: string;
   department: string;
+  sector: string;
   theme: Theme;
 }
 
@@ -62,6 +68,7 @@ export interface FilterState {
   theme: string;
   city: string;
   department: string;
+  sector: string;
 }
 
 export interface DataQuality {
@@ -75,11 +82,12 @@ export interface DataQuality {
 export interface DashboardMetrics {
   placements: number;
   companies: number;
-  medianDuration: number | null;
+  averageDuration: number | null;
   placementRate: number | null;
-  semesterTrend: Array<{ semester: string; count: number; movingAverage: number }>;
+  semesterTrend: Array<{ semester: string; count: number }>;
   topCompanies: Array<{ key: string; name: string; count: number; semesters: number }>;
   themeCounts: Array<{ name: Theme; value: number }>;
+  sectorCounts: Array<{ name: string; value: number }>;
   organizationContinuity: Array<{ semester: string; newOrganizations: number; recurringOrganizations: number }>;
   geographyCounts: Array<{ name: string; value: number; city: string }>;
   quality: DataQuality;

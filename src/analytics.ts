@@ -84,44 +84,69 @@ export function semesterOrder(semester: string): number {
 
 export function classifyTheme(project: string): Theme {
   const text = normalizeSearch(project);
+  if (!text || text.includes("POR DEFINIR") || text.includes("SIN DEFINIR")) {
+    return "Sin información / por definir";
+  }
+
   const rules: Array<[Theme, string[]]> = [
     [
-      "Automatización y electrónica",
-      ["AUTOMAT", "ELECTRON", "IOT", "SENSOR", "ROBOT", "PLC", "MECATRON", "CONTROL"],
+      "Salud y tecnología biomédica",
+      ["BIOMED", "ORTOPED", "FISIO", "BIPED", "ELECTROMIOGRAF", "PRESION PLANTAR", "NEONATAL", "INCUBADORA", "RESPIRATOR", "HOSPITAL SIMULADO", "ANALISIS DE MARCHA", "EQUILIBRIO FLAMENCO", "SIMULACION EN SALUD"],
     ],
     [
-      "Software y datos",
+      "Educación e innovación",
+      ["STEAM", "GUIA DE APRENDIZAJE", "PROCESO FORMATIVO", "PROCESO EDUCATIVO", "ACTIVIDADES DE CIENCIA", "INVESTIGACION E INNOVACION", "APOYO EN LAS CLASES", "FORTALECIMIENTO TECNOLOGICO Y APRENDIZAJE"],
+    ],
+    [
+      "Software y transformación digital",
       [
         "SOFTWARE",
         "APLICACION",
+        "APLICATIVO",
+        "APP ",
         "PAGINA WEB",
+        "PORTAL WEB",
         "SISTEMA DE INFORMACION",
         "BASE DE DATOS",
         "CHATBOT",
         "CHAT BOT",
         "INTELIGENCIA ARTIFICIAL",
         "PLATAFORMA",
+        "FACTURACION ELECTRONICA",
+        "TRANSFORMACION DIGITAL",
+        "PILOTO DE UN SERVICIO",
+        "MIKROTIK",
+        "ANILLO REDUNDANTE",
       ],
     ],
     [
-      "Diseño y manufactura",
-      ["DISENO", "CAD", "CAM", "PROTOTIP", "FABRIC", "MANUFACTUR", "MODELADO", "MAQUINA", "3D"],
+      "Automatización y control",
+      ["AUTOMAT", "ELECTRON", "ELECTRIC", "IOT", "SENSOR", "ROBOT", "PLC", "MECATRON", "CONTROL", "TARJETA", "ARDUPILOT", "NAVEGACION AUTONOMA", "MONITOREO DE VARIABLES"],
     ],
     [
-      "Mantenimiento y operaciones",
-      ["MANTENIMIENTO", "OPERACION", "LOGISTIC", "INVENTARIO", "PRODUCCION", "EQUIPOS"],
+      "Energía y sostenibilidad",
+      ["AMBIENT", "RESIDU", "ENERGIA", "ENERGETIC", "SOLAR", "SOSTENIB", "RECICL", "AGUA", "SUBPRODUCT", "RUIDO", "BESS", "BATERIA", "FIBRA DE FIQUE", "MATERIAL AISLANTE"],
     ],
     [
-      "Gestión y calidad",
-      ["GESTION", "CALIDAD", "PROCESO", "AUDITOR", "DOCUMENT", "ADMINISTR", "SEGURIDAD"],
+      "Mantenimiento y confiabilidad",
+      ["MANTENIMIENTO", "REPARACION", "DIAGNOSTICO", "CALIBRACION", "HOJAS DE VIDA", "PREVENCION DE FALLAS", "CONFIABILIDAD"],
     ],
     [
-      "Sostenibilidad",
-      ["AMBIENT", "RESIDU", "ENERGIA", "SOSTENIB", "RECICL", "AGUA"],
+      "Operaciones y logística",
+      ["LOGISTIC", "INVENTARIO", "PRODUCCION", "LINEA DE PROCESO", "PLANTA DE PRODUCCION", "DISTRIBUCION", "OPERACION DEL EQUIPAMIENTO", "ALMACENAMIENTO"],
+    ],
+    [
+      "Gestión, calidad y seguridad",
+      ["GESTION", "CALIDAD", "ISO 9001", "AUDITOR", "DOCUMENT", "ADMINISTR", "SEGURIDAD", "INTERVENTORIA", "DIRECCION OPERATIVA"],
+    ],
+    [
+      "Diseño y desarrollo de producto",
+      ["DISENO", "CAD", "CAM", "CAE", "PROTOTIP", "FABRIC", "MANUFACTUR", "MODELADO", "MAQUINA", "DISPOSITIVO", "PRODUCTO", "3D", "GRUA", "ELEMENTO DIDACTICO", "EQUIPO DE PREACONDICIONAMIENTO"],
     ],
   ];
 
-  return rules.find(([, keywords]) => keywords.some((keyword) => text.includes(keyword)))?.[0] ?? "Otros";
+  return rules.find(([, keywords]) => keywords.some((keyword) => text.includes(keyword)))?.[0]
+    ?? "Ingeniería y soporte técnico";
 }
 
 export function parseGvizDate(value: unknown): string | null {
@@ -152,6 +177,7 @@ export function hydrateRecord(
     ...record,
     city: record.city ?? "",
     department: record.department ?? "",
+    sector: record.sector || "Sin clasificar",
     id: `${record.semester}-${index}`,
     company: company.label,
     companyKey: company.key,
@@ -165,6 +191,7 @@ export function filterRecords(records: PlacementRecord[], filters: FilterState):
       (filters.semester === ALL_FILTER || record.semester === filters.semester) &&
       (filters.companyKey === ALL_FILTER || record.companyKey === filters.companyKey) &&
       (filters.theme === ALL_FILTER || record.theme === filters.theme) &&
+      (filters.sector === ALL_FILTER || record.sector === filters.sector) &&
       (filters.city === ALL_FILTER || record.city === filters.city) &&
       (filters.department === ALL_FILTER || record.department === filters.department),
   );
@@ -218,18 +245,9 @@ export function calculateMetrics(
     companyMap.set(record.companyKey, company);
   }
 
-  const trendRaw = [...semesterMap.entries()]
+  const semesterTrend = [...semesterMap.entries()]
     .map(([semester, count]) => ({ semester, count }))
     .sort((a, b) => semesterOrder(a.semester) - semesterOrder(b.semester));
-  const semesterTrend = trendRaw.map((point, index) => {
-    const window = trendRaw.slice(Math.max(0, index - 2), index + 1);
-    return {
-      ...point,
-      movingAverage: Number(
-        (window.reduce((sum, item) => sum + item.count, 0) / window.length).toFixed(1),
-      ),
-    };
-  });
 
   const companyPortfolio = [...companyMap.entries()]
     .map(([key, item]) => ({
@@ -244,6 +262,9 @@ export function calculateMetrics(
   const validDurations = records
     .map((record) => record.durationDays)
     .filter((days): days is number => days !== null && days >= 30 && days <= 365);
+  const averageDuration = validDurations.length
+    ? Math.round(validDurations.reduce((sum, days) => sum + days, 0) / validDurations.length)
+    : null;
   const reported = uniqueReported(records);
   const placed = reported.reduce((sum, [value]) => sum + value, 0);
   const unplaced = reported.reduce((sum, [, value]) => sum + value, 0);
@@ -319,20 +340,29 @@ export function calculateMetrics(
     .sort((a, b) => b.value - a.value)
     .slice(0, 8);
 
+  const sectorMap = new Map<string, number>();
+  for (const record of records) {
+    const sector = record.sector || "Sin clasificar";
+    sectorMap.set(sector, (sectorMap.get(sector) ?? 0) + 1);
+  }
+  const sectorCounts = [...sectorMap.entries()]
+    .map(([name, value]) => ({ name, value }))
+    .sort((a, b) => b.value - a.value);
+
   const insights = records.length
     ? [
         latest && previous
           ? `${latest.semester} registra ${latest.count} practicantes: ${Math.abs(change)} ${change >= 0 ? "más" : "menos"} que ${previous.semester}.`
           : "Seleccione más de un semestre para comparar la evolución.",
         `${companyPortfolio[0]?.name ?? "La principal organización"} lidera con ${companyPortfolio[0]?.students ?? 0} vinculaciones; las cinco primeras concentran ${Math.round((topFive / records.length) * 100)}%.`,
-        `${organizationContinuity.reduce((sum, item) => sum + item.recurringOrganizations, 0)} participaciones corresponden a organizaciones que ya habían recibido practicantes en semestres anteriores.`,
+        `${sectorCounts[0]?.name ?? "El sector principal"} concentra ${sectorCounts[0]?.value ?? 0} prácticas en la selección.`,
       ]
     : ["No hay registros para la combinación de filtros seleccionada."];
 
   return {
     placements: records.length,
     companies: companyMap.size,
-    medianDuration: median(validDurations),
+    averageDuration,
     placementRate: placed + unplaced ? Math.round((placed / (placed + unplaced)) * 1000) / 10 : null,
     semesterTrend,
     topCompanies: companyPortfolio.slice(0, 8).map((item) => ({
@@ -345,6 +375,7 @@ export function calculateMetrics(
       .map(([name, value]) => ({ name, value }))
       .filter((item) => item.value > 0)
       .sort((a, b) => b.value - a.value),
+    sectorCounts,
     organizationContinuity,
     geographyCounts,
     quality,
@@ -361,5 +392,6 @@ export function filterOptions(records: PlacementRecord[]) {
     .sort((a, b) => a.label.localeCompare(b.label, "es"));
   const departments = [...new Set(records.map((record) => record.department).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
   const cities = [...new Set(records.map((record) => record.city).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
-  return { semesters, companies, themes: THEMES, departments, cities };
+  const sectors = [...new Set(records.map((record) => record.sector).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
+  return { semesters, companies, themes: THEMES, departments, cities, sectors };
 }

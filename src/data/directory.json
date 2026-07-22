@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T16:25:16.436Z",
+  "generatedAt": "2026-07-22T20:48:48.986Z",
   "records": [
     {
       "id": "2020-1-0",
@@ -10,7 +10,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2020-1-1",
@@ -21,7 +22,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Diseño y manufactura"
+      "sector": "Sector público y desarrollo social",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2020-1-2",
@@ -32,7 +34,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Diseño y manufactura"
+      "sector": "Sector público y desarrollo social",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2020-1-3",
@@ -43,7 +46,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Diseño y manufactura"
+      "sector": "Sector público y desarrollo social",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2020-1-4",
@@ -54,7 +58,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Industria y manufactura",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2020-1-5",
@@ -63,9 +68,10 @@
       "company": "EPI S.A.S",
       "projectTitle": "Diseño de un equipo de preacondicionamiento en abrasión para equipos de trabajo en alturas con la norma ANSI",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Diseño y manufactura"
+      "city": "Cali",
+      "department": "Valle del Cauca",
+      "sector": "Industria y manufactura",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2020-1-6",
@@ -76,7 +82,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2020-1-7",
@@ -85,9 +92,10 @@
       "company": "FERRETERÍA LA 5TA",
       "projectTitle": "Máquina embotelladora de Thinner",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Diseño y manufactura"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Comercio y servicios",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2020-1-8",
@@ -98,7 +106,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Software y datos"
+      "sector": "Agroindustria y alimentos",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2020-1-9",
@@ -109,7 +118,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2020-1-10",
@@ -120,7 +130,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Diseño y manufactura"
+      "sector": "Sector público y desarrollo social",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2020-1-11",
@@ -131,7 +142,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2020-1-12",
@@ -140,9 +152,10 @@
       "company": "ELECTROSISTEMAS DEL CAUCA",
       "projectTitle": "Interventorias electricas en la empresa Electrósistemas del Cauca",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Otros"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Automatización y control"
     },
     {
       "id": "2020-1-13",
@@ -153,7 +166,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Mantenimiento y operaciones"
+      "sector": "Transporte y movilidad",
+      "theme": "Mantenimiento y confiabilidad"
     },
     {
       "id": "2020-1-14",
@@ -164,7 +178,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Industria y manufactura",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2020-1-15",
@@ -175,7 +190,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2020-1-16",
@@ -186,7 +202,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Diseño y manufactura"
+      "sector": "Industria y manufactura",
+      "theme": "Mantenimiento y confiabilidad"
     },
     {
       "id": "2020-2-17",
@@ -197,7 +214,8 @@
       "tutorName": "",
       "city": "El Bordo (Patía)",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Construcción e infraestructura",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2020-2-18",
@@ -208,7 +226,8 @@
       "tutorName": "",
       "city": "El Bordo (Patía)",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Construcción e infraestructura",
+      "theme": "Automatización y control"
     },
     {
       "id": "2020-2-19",
@@ -219,7 +238,8 @@
       "tutorName": "",
       "city": "El Bordo (Patía)",
       "department": "Cauca",
-      "theme": "Mantenimiento y operaciones"
+      "sector": "Construcción e infraestructura",
+      "theme": "Ingeniería y soporte técnico"
     },
     {
       "id": "2020-2-20",
@@ -230,7 +250,8 @@
       "tutorName": "",
       "city": "El Bordo (Patía)",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Construcción e infraestructura",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2020-2-21",
@@ -239,9 +260,10 @@
       "company": "Ecoingeniería Sostenible S.A.S",
       "projectTitle": "Desarrollar e implementar, dentro de la imagen corporativa el portal web y la facturación electrónica en la empresa ECO INGENIERÍA SOSTENIBLE S.A.S.",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Automatización y electrónica"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Energía, ambiente y servicios públicos",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2020-2-22",
@@ -252,7 +274,8 @@
       "tutorName": "",
       "city": "El Bordo (Patía)",
       "department": "Cauca",
-      "theme": "Mantenimiento y operaciones"
+      "sector": "Construcción e infraestructura",
+      "theme": "Ingeniería y soporte técnico"
     },
     {
       "id": "2020-2-23",
@@ -261,9 +284,10 @@
       "company": "IOT TECH SOLUTIONS S.A.S",
       "projectTitle": "Desarrollar un prototipo de APP de gestión para la línea de comercialización de tracking y supervisión de señales.",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Diseño y manufactura"
+      "city": "Bogotá",
+      "department": "Bogotá D.C.",
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2020-2-24",
@@ -274,7 +298,8 @@
       "tutorName": "",
       "city": "El Bordo (Patía)",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Construcción e infraestructura",
+      "theme": "Automatización y control"
     },
     {
       "id": "2020-2-25",
@@ -283,9 +308,10 @@
       "company": "FERRETERÍA LA 5TA",
       "projectTitle": "Máquina embotelladora de Thinner",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Diseño y manufactura"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Comercio y servicios",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2020-2-26",
@@ -296,7 +322,8 @@
       "tutorName": "",
       "city": "El Bordo (Patía)",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Construcción e infraestructura",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2020-2-27",
@@ -307,7 +334,8 @@
       "tutorName": "",
       "city": "El Bordo (Patía)",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Construcción e infraestructura",
+      "theme": "Operaciones y logística"
     },
     {
       "id": "2021-1-28",
@@ -316,9 +344,10 @@
       "company": "Distrihuevos Diaz",
       "projectTitle": "Implementar Norma Técnica ISO 9001 en gestión de calidad para distrihuevos",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Gestión y calidad"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Agroindustria y alimentos",
+      "theme": "Gestión, calidad y seguridad"
     },
     {
       "id": "2021-1-29",
@@ -329,7 +358,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Industria y manufactura",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2021-1-30",
@@ -340,7 +370,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2021-1-31",
@@ -351,7 +382,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Automatización y electrónica"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Automatización y control"
     },
     {
       "id": "2021-1-32",
@@ -362,7 +394,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Mantenimiento y operaciones"
+      "sector": "Construcción e infraestructura",
+      "theme": "Mantenimiento y confiabilidad"
     },
     {
       "id": "2021-1-33",
@@ -373,7 +406,8 @@
       "tutorName": "",
       "city": "Guachené",
       "department": "Cauca",
-      "theme": "Mantenimiento y operaciones"
+      "sector": "Agroindustria y alimentos",
+      "theme": "Mantenimiento y confiabilidad"
     },
     {
       "id": "2021-1-34",
@@ -384,7 +418,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Mantenimiento y operaciones"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Operaciones y logística"
     },
     {
       "id": "2021-1-35",
@@ -395,7 +430,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Industria y manufactura",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2021-1-36",
@@ -406,7 +442,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2021-1-37",
@@ -417,7 +454,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Industria y manufactura",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2021-1-38",
@@ -428,7 +466,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Software y datos"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2021-1-39",
@@ -439,7 +478,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2021-2-40",
@@ -450,7 +490,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Industria y manufactura",
+      "theme": "Sin información / por definir"
     },
     {
       "id": "2021-2-41",
@@ -461,7 +502,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2021-2-42",
@@ -472,7 +514,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Otros"
+      "sector": "Consultoría y servicios profesionales",
+      "theme": "Sin información / por definir"
     },
     {
       "id": "2021-2-43",
@@ -483,7 +526,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2021-2-44",
@@ -494,7 +538,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2021-2-45",
@@ -505,7 +550,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Transporte y movilidad",
+      "theme": "Sin información / por definir"
     },
     {
       "id": "2021-2-46",
@@ -516,7 +562,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2021-2-47",
@@ -527,7 +574,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2021-2-48",
@@ -536,9 +584,10 @@
       "company": "IE Don Bosco",
       "projectTitle": "Desarrollar una guía de aprendizaje en el área técnica de electricidad de sistemas polifásicos para la institución educativa Don Bosco",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Otros"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Educación e innovación"
     },
     {
       "id": "2021-2-49",
@@ -549,7 +598,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2021-2-50",
@@ -560,7 +610,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Industria y manufactura",
+      "theme": "Automatización y control"
     },
     {
       "id": "2021-2-51",
@@ -569,9 +620,10 @@
       "company": "Velas la Esperanza",
       "projectTitle": "Fabricación digital de figuras en velas y desarrollo de sistema de enfriamiento de moldes",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Diseño y manufactura"
+      "city": "Timbío",
+      "department": "Cauca",
+      "sector": "Industria y manufactura",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2021-2-52",
@@ -582,7 +634,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Otros"
+      "sector": "Agroindustria y alimentos",
+      "theme": "Sin información / por definir"
     },
     {
       "id": "2021-2-53",
@@ -593,7 +646,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Operaciones y logística"
     },
     {
       "id": "2021-2-54",
@@ -604,7 +658,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Transporte y movilidad",
+      "theme": "Ingeniería y soporte técnico"
     },
     {
       "id": "2022-1-55",
@@ -613,9 +668,10 @@
       "company": "SOLO MOTOS W",
       "projectTitle": "Desarrollo de tarjeta de control para maquina dispensadora comno proyecto principal",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Automatización y electrónica"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Comercio y servicios",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-1-56",
@@ -626,7 +682,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Industria y manufactura",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2022-1-57",
@@ -637,7 +694,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Industria y manufactura",
+      "theme": "Operaciones y logística"
     },
     {
       "id": "2022-1-58",
@@ -648,7 +706,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Software y datos"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2022-1-59",
@@ -657,9 +716,10 @@
       "company": "Empresa Social del Estado",
       "projectTitle": "Desarrollar funciones en el area de ingeniería Biomédica y gestión tecnologica de la informacion con funciones de apoyo en mantenimiento y levantamiento de hojas de vida de los activos logicos y hardware de la planta tecnologica en las instalaciones del Centro de los municipios Cajibio, Morales, Piendamo y Silvia del departamento del Cauca",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Mantenimiento y operaciones"
+      "city": "Piendamó",
+      "department": "Cauca",
+      "sector": "Salud y tecnología biomédica",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2022-1-60",
@@ -670,7 +730,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2022-1-61",
@@ -681,7 +742,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2022-1-62",
@@ -692,7 +754,8 @@
       "tutorName": "",
       "city": "La Vega",
       "department": "Cauca",
-      "theme": "Gestión y calidad"
+      "sector": "Agroindustria y alimentos",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-1-63",
@@ -703,7 +766,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-1-64",
@@ -712,9 +776,10 @@
       "company": "Empresa social del estado centro 1",
       "projectTitle": "Apoyar las actividades y procesos de área de Ingenieria Biomedica y Gestion Tecnologica de la informacion en la ESE 1 CENTRO",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Gestión y calidad"
+      "city": "Piendamó",
+      "department": "Cauca",
+      "sector": "Salud y tecnología biomédica",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2022-1-65",
@@ -725,7 +790,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Gestión y calidad"
+      "sector": "Industria y manufactura",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2022-1-66",
@@ -736,7 +802,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Transporte y movilidad",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-1-67",
@@ -747,7 +814,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-2-68",
@@ -758,7 +826,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-2-69",
@@ -769,7 +838,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Comercio y servicios",
+      "theme": "Mantenimiento y confiabilidad"
     },
     {
       "id": "2022-2-70",
@@ -778,9 +848,10 @@
       "company": "EPI S.A.S.",
       "projectTitle": "Desarrollar un prototipo de banco de pruebas de arco electrico para arneses en la empresa EPI sas",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Diseño y manufactura"
+      "city": "Cali",
+      "department": "Valle del Cauca",
+      "sector": "Industria y manufactura",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-2-71",
@@ -791,7 +862,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Software y datos"
+      "sector": "Industria y manufactura",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2022-2-72",
@@ -802,7 +874,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Gestión y calidad"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Educación e innovación"
     },
     {
       "id": "2022-2-73",
@@ -811,9 +884,10 @@
       "company": "INGENIERÍA E INOXIDABLES S.A.S",
       "projectTitle": "Desarrollar un progra,ma de mantenimiento acorde a las necesidades de la empresa en la linea de produccion de productos de la empresa",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Mantenimiento y operaciones"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Industria y manufactura",
+      "theme": "Mantenimiento y confiabilidad"
     },
     {
       "id": "2022-2-74",
@@ -824,7 +898,8 @@
       "tutorName": "",
       "city": "Paispamba (Sotará)",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Agroindustria y alimentos",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2022-2-75",
@@ -835,7 +910,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Industria y manufactura",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2022-2-76",
@@ -844,9 +920,10 @@
       "company": "Servagro LTDA",
       "projectTitle": "Desarrollar una fresa routeadora CNC para el proceso de marcado en la empresa Servagro LTDA",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Diseño y manufactura"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Agroindustria y alimentos",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2022-2-77",
@@ -857,7 +934,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-2-78",
@@ -868,7 +946,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Salud y tecnología biomédica",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-2-79",
@@ -879,7 +958,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2022-2-80",
@@ -888,9 +968,10 @@
       "company": "BIOCRANN IPS",
       "projectTitle": "Desarrollar actividades de mantenimiento y gestion documental en la infraestructura fisica y tecnologica en los equipos biomedicos de la IPS BIOCRANN",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Mantenimiento y operaciones"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Salud y tecnología biomédica",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2022-2-81",
@@ -901,7 +982,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-2-82",
@@ -912,7 +994,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Comercio y servicios",
+      "theme": "Mantenimiento y confiabilidad"
     },
     {
       "id": "2022-2-83",
@@ -923,7 +1006,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Mantenimiento y operaciones"
+      "sector": "Agroindustria y alimentos",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-2-84",
@@ -934,7 +1018,8 @@
       "tutorName": "",
       "city": "Paispamba (Sotará)",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Agroindustria y alimentos",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2022-2-85",
@@ -945,7 +1030,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Energía, ambiente y servicios públicos",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-2-86",
@@ -956,7 +1042,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Salud y tecnología biomédica",
+      "theme": "Automatización y control"
     },
     {
       "id": "2022-2-87",
@@ -967,7 +1054,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Mantenimiento y operaciones"
+      "sector": "Salud y tecnología biomédica",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2022-2-88",
@@ -978,7 +1066,8 @@
       "tutorName": "",
       "city": "Paispamba (Sotará)",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Agroindustria y alimentos",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2023-1-89",
@@ -989,7 +1078,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2023-1-90",
@@ -998,9 +1088,10 @@
       "company": "SIPCO ZF E.S.P",
       "projectTitle": "Diseñar e implementar tableros de automatización industrial en maquinaria industrial",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Automatización y electrónica"
+      "city": "Villa Rica",
+      "department": "Cauca",
+      "sector": "Energía, ambiente y servicios públicos",
+      "theme": "Automatización y control"
     },
     {
       "id": "2023-1-91",
@@ -1011,7 +1102,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Energía, ambiente y servicios públicos",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2023-1-92",
@@ -1022,7 +1114,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Sin información / por definir"
     },
     {
       "id": "2023-1-93",
@@ -1033,7 +1126,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Software y datos"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2023-1-94",
@@ -1042,9 +1136,10 @@
       "company": "Automatización Avanzada S.A",
       "projectTitle": "Desarrollo de ingeniería enfocada al sistema de almacenamiento de baterias (BESS)",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Diseño y manufactura"
+      "city": "Bogotá",
+      "department": "Bogotá D.C.",
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2023-1-95",
@@ -1055,7 +1150,8 @@
       "tutorName": "",
       "city": "Villa Rica",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Energía, ambiente y servicios públicos",
+      "theme": "Automatización y control"
     },
     {
       "id": "2023-1-96",
@@ -1066,7 +1162,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Automatización y control"
     },
     {
       "id": "2023-2-97",
@@ -1077,7 +1174,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2023-2-98",
@@ -1086,9 +1184,10 @@
       "company": "Electrosistemas del Cauca",
       "projectTitle": "Gestionar la dirección operativa, técnica y de diseño en instalaciones de red de baja tensión, media tensión, centro de transformación e instalaciones internas eléctricas y de comunicación en proyecto residencial “MONET”",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Diseño y manufactura"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Automatización y control"
     },
     {
       "id": "2023-2-99",
@@ -1099,7 +1198,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Industria y manufactura",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2023-2-100",
@@ -1110,7 +1210,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2023-2-101",
@@ -1119,9 +1220,10 @@
       "company": "Grupo consultor jurídico y empresarial INIZIO SAS",
       "projectTitle": "Diseñar un prototipo de componente mecánico para un sistema de monitoreo de variables ambientales en fincas agropecuarias – INIZIO S.A.S",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Diseño y manufactura"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Consultoría y servicios profesionales",
+      "theme": "Automatización y control"
     },
     {
       "id": "2023-2-102",
@@ -1132,7 +1234,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Gestión y calidad"
+      "sector": "Industria y manufactura",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2023-2-103",
@@ -1143,7 +1246,8 @@
       "tutorName": "",
       "city": "Cajibío",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Educación e innovación"
     },
     {
       "id": "2023-2-104",
@@ -1154,7 +1258,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Automatización y control"
     },
     {
       "id": "2023-2-105",
@@ -1165,7 +1270,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Gestión, calidad y seguridad"
     },
     {
       "id": "2023-2-106",
@@ -1176,7 +1282,8 @@
       "tutorName": "",
       "city": "Cajibío",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Agroindustria y alimentos",
+      "theme": "Automatización y control"
     },
     {
       "id": "2024-1-107",
@@ -1187,7 +1294,8 @@
       "tutorName": "",
       "city": "Guadalajara",
       "department": "Jalisco, México",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2024-1-108",
@@ -1198,7 +1306,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Software y datos"
+      "sector": "Energía, ambiente y servicios públicos",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2024-1-109",
@@ -1209,7 +1318,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Software y datos"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2024-1-110",
@@ -1220,7 +1330,8 @@
       "tutorName": "",
       "city": "Timbío",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Sector público y desarrollo social",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2024-1-111",
@@ -1231,7 +1342,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2024-1-112",
@@ -1242,7 +1354,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Automatización y control"
     },
     {
       "id": "2024-1-113",
@@ -1253,7 +1366,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2024-1-114",
@@ -1264,7 +1378,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Salud y tecnología biomédica",
+      "theme": "Automatización y control"
     },
     {
       "id": "2024-1-115",
@@ -1275,7 +1390,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2024-1-116",
@@ -1286,7 +1402,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Automatización y control"
     },
     {
       "id": "2024-1-117",
@@ -1297,7 +1414,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2024-1-118",
@@ -1308,7 +1426,8 @@
       "tutorName": "",
       "city": "Timbío",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Sector público y desarrollo social",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2024-2-119",
@@ -1319,7 +1438,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Industria y manufactura",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2024-2-120",
@@ -1328,9 +1448,10 @@
       "company": "Corporación Educativa Camino A La Excelencia",
       "projectTitle": "Implementación de guias de aprendizaje y Aulas STEAM en la Institución Educativa",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Otros"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Educación e innovación"
     },
     {
       "id": "2024-2-121",
@@ -1339,9 +1460,10 @@
       "company": "INIZIO S.A.S",
       "projectTitle": "Desarrollo del componente mecánico para el sistema de monitoreo de variables ambientales en fincas agropecuarias alimentado por energia solar.",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Sostenibilidad"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Consultoría y servicios profesionales",
+      "theme": "Automatización y control"
     },
     {
       "id": "2024-2-122",
@@ -1352,7 +1474,8 @@
       "tutorName": "",
       "city": "Piendamó",
       "department": "Cauca",
-      "theme": "Gestión y calidad"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Educación e innovación"
     },
     {
       "id": "2024-2-123",
@@ -1363,7 +1486,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Industria y manufactura",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2024-2-124",
@@ -1374,7 +1498,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Industria y manufactura",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2024-2-125",
@@ -1385,7 +1510,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Mantenimiento y operaciones"
+      "sector": "Agroindustria y alimentos",
+      "theme": "Operaciones y logística"
     },
     {
       "id": "2024-2-126",
@@ -1396,7 +1522,8 @@
       "tutorName": "",
       "city": "Bogotá",
       "department": "Cundinamarca",
-      "theme": "Software y datos"
+      "sector": "Comercio y servicios",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2024-2-127",
@@ -1405,9 +1532,10 @@
       "company": "EnergyDrops S.A.S",
       "projectTitle": "Desarrollo de actividades de ingeniería e innovación en la planta de producción Energy Drops",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Mantenimiento y operaciones"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Agroindustria y alimentos",
+      "theme": "Operaciones y logística"
     },
     {
       "id": "2024-2-128",
@@ -1418,7 +1546,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2024-2-129",
@@ -1427,9 +1556,10 @@
       "company": "La Rochela S.A.S",
       "projectTitle": "Desarrollar un prototipo de sistema de liras para una máquina de corte y desuerado de queso en la empresa la Rochela",
       "tutorName": "",
-      "city": "",
-      "department": "",
-      "theme": "Diseño y manufactura"
+      "city": "Timbío",
+      "department": "Cauca",
+      "sector": "Agroindustria y alimentos",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2024-2-130",
@@ -1440,7 +1570,8 @@
       "tutorName": "",
       "city": "Guadalajara",
       "department": "Jalisco, México",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2024-2-131",
@@ -1451,7 +1582,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Automatización y electrónica"
+      "sector": "Agroindustria y alimentos",
+      "theme": "Automatización y control"
     },
     {
       "id": "2024-2-132",
@@ -1462,7 +1594,8 @@
       "tutorName": "",
       "city": "",
       "department": "",
-      "theme": "Otros"
+      "sector": "Agroindustria y alimentos",
+      "theme": "Sin información / por definir"
     },
     {
       "id": "2024-2-133",
@@ -1473,7 +1606,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2024-2-134",
@@ -1484,7 +1618,8 @@
       "tutorName": "",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Software y datos"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2024-2-135",
@@ -1495,7 +1630,8 @@
       "tutorName": "",
       "city": "Silvia",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Educación e innovación"
     },
     {
       "id": "2025-1-136",
@@ -1506,7 +1642,8 @@
       "tutorName": "Oscar Fernando Betancourt",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Industria y manufactura",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2025-1-137",
@@ -1517,7 +1654,8 @@
       "tutorName": "Juan Pablo Martinez",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2025-1-138",
@@ -1528,7 +1666,8 @@
       "tutorName": "Gina pineda",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Sostenibilidad"
+      "sector": "Energía, ambiente y servicios públicos",
+      "theme": "Automatización y control"
     },
     {
       "id": "2025-1-139",
@@ -1539,7 +1678,8 @@
       "tutorName": "Jhonatan Ramos",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Automatización y control"
     },
     {
       "id": "2025-1-140",
@@ -1550,7 +1690,8 @@
       "tutorName": "Juan Pablo Martinez",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2025-1-141",
@@ -1559,9 +1700,10 @@
       "company": "Ecoingeniería Sostenible S.A.S",
       "projectTitle": "Desarrollo de un sistema electrónico para entrenamiento de la técnica de control del balón y monitoreo de desempeño físico en futbolistas",
       "tutorName": "Johana Astudillo",
-      "city": "",
-      "department": "",
-      "theme": "Automatización y electrónica"
+      "city": "Popayán",
+      "department": "Cauca",
+      "sector": "Energía, ambiente y servicios públicos",
+      "theme": "Automatización y control"
     },
     {
       "id": "2025-2-142",
@@ -1572,7 +1714,8 @@
       "tutorName": "Dra. Elizabeth Roldan",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2025-2-143",
@@ -1583,7 +1726,8 @@
       "tutorName": "Ing. Juan Daniel Hurtado",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Mantenimiento y operaciones"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2025-2-144",
@@ -1594,7 +1738,8 @@
       "tutorName": "Ing. Juan Manuel Segura",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Industria y manufactura",
+      "theme": "Automatización y control"
     },
     {
       "id": "2025-2-145",
@@ -1605,7 +1750,8 @@
       "tutorName": "Dr. Juan Martinez",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2025-2-146",
@@ -1616,7 +1762,8 @@
       "tutorName": "Ing, Luis Muñoz",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Salud y tecnología biomédica",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2025-2-147",
@@ -1627,7 +1774,8 @@
       "tutorName": "Dra. Elizabeth Roldan",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Salud y tecnología biomédica"
     },
     {
       "id": "2025-2-148",
@@ -1638,7 +1786,8 @@
       "tutorName": "Ing. David Martinez",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Mantenimiento y operaciones"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Mantenimiento y confiabilidad"
     },
     {
       "id": "2025-2-149",
@@ -1649,7 +1798,8 @@
       "tutorName": "Dr. Juan Martinez",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2025-2-150",
@@ -1660,7 +1810,8 @@
       "tutorName": "Diana Marcela Trujillo M.",
       "city": "Puerto Tejada",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Industria y manufactura",
+      "theme": "Automatización y control"
     },
     {
       "id": "2025-2-151",
@@ -1671,7 +1822,8 @@
       "tutorName": "Richard Narvaez",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Mantenimiento y operaciones"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Mantenimiento y confiabilidad"
     },
     {
       "id": "2025-2-152",
@@ -1682,7 +1834,8 @@
       "tutorName": "Dr. Juan Martinez",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2025-2-153",
@@ -1693,7 +1846,8 @@
       "tutorName": "Ing. Johana Astudillo",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Energía, ambiente y servicios públicos",
+      "theme": "Automatización y control"
     },
     {
       "id": "2025-2-154",
@@ -1704,7 +1858,8 @@
       "tutorName": "Dr. Juan Martinez",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2025-2-155",
@@ -1715,7 +1870,8 @@
       "tutorName": "David Castañeda",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Otros"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Automatización y control"
     },
     {
       "id": "2026-1-156",
@@ -1726,7 +1882,8 @@
       "tutorName": "John Robert Muñoz",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Gestión, calidad y seguridad"
     },
     {
       "id": "2026-1-157",
@@ -1737,7 +1894,8 @@
       "tutorName": "John Robert Muñoz",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2026-1-158",
@@ -1748,7 +1906,8 @@
       "tutorName": "Richard Orlando Narváez",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Automatización y control"
     },
     {
       "id": "2026-1-159",
@@ -1759,7 +1918,8 @@
       "tutorName": "ANA CRISTINA AVILA GARCIA",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Automatización y electrónica"
+      "sector": "Energía, ambiente y servicios públicos",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2026-1-160",
@@ -1770,7 +1930,8 @@
       "tutorName": "John Robert Muñoz",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Diseño y desarrollo de producto"
     },
     {
       "id": "2026-1-161",
@@ -1781,7 +1942,8 @@
       "tutorName": "Dario Camallo",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Software y datos"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2026-1-162",
@@ -1792,7 +1954,8 @@
       "tutorName": "John Robert Muñoz",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Mantenimiento y confiabilidad"
     },
     {
       "id": "2026-1-163",
@@ -1803,7 +1966,8 @@
       "tutorName": "Dario Camallo",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Software y datos"
+      "sector": "Educación, ciencia e innovación",
+      "theme": "Software y transformación digital"
     },
     {
       "id": "2026-1-164",
@@ -1814,7 +1978,8 @@
       "tutorName": "Maria Del Mar",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Sostenibilidad"
+      "sector": "Industria y manufactura",
+      "theme": "Energía y sostenibilidad"
     },
     {
       "id": "2026-1-165",
@@ -1825,7 +1990,8 @@
       "tutorName": "Elder Armin Rengifo Bolaños",
       "city": "Popayán",
       "department": "Cauca",
-      "theme": "Diseño y manufactura"
+      "sector": "Tecnología, ingeniería y automatización",
+      "theme": "Diseño y desarrollo de producto"
     }
   ]
 }

@@ -9,7 +9,7 @@ import {
 import type { FallbackPayload, LoadedDataset, PlacementRecord } from "./types";
 
 const SHEET_ID = __PUBLIC_SHEET_ID__;
-const QUERY = "select A,B,D,E,F,G,H,I,M,N,O,P,Q";
+const QUERY = "select A,B,D,E,F,G,H,I,M,N,O,P,Q,R";
 
 interface GvizCell {
   v?: unknown;
@@ -53,6 +53,7 @@ function transformGviz(response: GvizResponse): PlacementRecord[] {
           company,
           city: textCell(cells[11]),
           department: textCell(cells[12]),
+          sector: textCell(cells[13]) || "Sin clasificar",
           startDate,
           endDate,
           durationDays: durationDays(startDate, endDate),

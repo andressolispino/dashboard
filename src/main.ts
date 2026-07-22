@@ -9,7 +9,7 @@ import { observeCharts, renderCharts } from "./charts";
 import { loadDataset } from "./data-source";
 import { initializeDirectory } from "./directory";
 import { renderGeographicMap } from "./map";
-import type { DataQuality, FilterState, LoadedDataset } from "./types";
+import type { FilterState, LoadedDataset } from "./types";
 
 const app = document.querySelector<HTMLDivElement>("#app");
 if (!app) throw new Error("No se encontró el contenedor principal.");
@@ -46,6 +46,10 @@ app.innerHTML = `
         <label>
           <span>Temática del proyecto</span>
           <select id="theme-filter" aria-label="Filtrar por temática"></select>
+        </label>
+        <label>
+          <span>Sector de la organización</span>
+          <select id="sector-filter" aria-label="Filtrar por sector económico"></select>
         </label>
         <button class="reset-button" id="reset-filters" type="button">
           <span aria-hidden="true">↺</span> Restablecer filtros
@@ -109,9 +113,9 @@ app.innerHTML = `
         </article>
         <article class="kpi-card green">
           <div class="kpi-icon" aria-hidden="true">◷</div>
-          <span>Duración mediana</span>
+          <span>Duración promedio</span>
           <strong id="kpi-duration">—</strong>
-          <small>Excluye fechas atípicas o incompletas</small>
+          <small>Días calendario; excluye fechas atípicas</small>
         </article>
         <article class="kpi-card cyan">
           <div class="kpi-icon" aria-hidden="true">✓</div>
@@ -147,10 +151,10 @@ app.innerHTML = `
 
         <article class="panel">
           <div class="panel-heading">
-            <div><span>Portafolio de proyectos</span><h2>Áreas de trabajo identificadas</h2></div>
+            <div><span>Portafolio de proyectos</span><h2>Enfoques de los proyectos</h2></div>
           </div>
           <div class="chart chart-tall" data-chart="themes" role="img" aria-label="Distribución de temáticas de proyecto"></div>
-          <details class="methodology"><summary>¿Cómo se clasifican?</summary><p>La categoría se asigna automáticamente con palabras clave del título o descripción del proyecto. Es una aproximación analítica y puede corregirse agregando una categoría oficial en la hoja.</p></details>
+          <details class="methodology"><summary>¿Cómo se clasifican?</summary><p>La taxonomía fue revisada con asistencia de IA sobre los títulos históricos y se aplica mediante reglas auditables. Prioriza el propósito del proyecto y separa los registros sin descripción.</p></details>
         </article>
 
         <article class="panel panel-wide">
@@ -170,19 +174,13 @@ app.innerHTML = `
           <div class="geo-map-summary" id="geo-map-summary" aria-label="Resumen de ciudades"></div>
         </article>
 
-        <article class="panel quality-panel">
+        <article class="panel sector-panel">
           <div class="panel-heading">
-            <div><span>Gobierno del dato</span><h2>Calidad de la base</h2></div>
-            <strong class="quality-score" id="quality-score">—</strong>
+            <div><span>Entorno empresarial</span><h2>Sectores de vinculación</h2></div>
+            <small>Seleccione una barra para filtrar</small>
           </div>
-          <div class="quality-progress"><i id="quality-progress"></i></div>
-          <div class="quality-list">
-            <div><span>Fechas de inicio faltantes</span><strong id="quality-start">—</strong></div>
-            <div><span>Fechas de fin faltantes</span><strong id="quality-end">—</strong></div>
-            <div><span>Duraciones atípicas</span><strong id="quality-duration">—</strong></div>
-            <div><span>Semestres con total inconsistente</span><strong id="quality-mismatch">—</strong></div>
-          </div>
-          <p class="quality-help">Estas alertas no se eliminan: se aíslan de los cálculos sensibles y quedan visibles para su corrección en Sheets.</p>
+          <div class="chart chart-medium" data-chart="sectors" role="img" aria-label="Distribución de prácticas por sector económico"></div>
+          <details class="methodology"><summary>Acerca del sector</summary><p>El sector corresponde a la actividad principal de cada organización, verificada con fuentes públicas y normalizada en categorías comparables.</p></details>
         </article>
       </section>
 
@@ -225,6 +223,10 @@ app.innerHTML = `
             <span>Ciudad</span>
             <select id="directory-city"></select>
           </label>
+          <label>
+            <span>Sector</span>
+            <select id="directory-sector"></select>
+          </label>
         </div>
         <div class="directory-result-line">
           <strong id="directory-count">0 registros</strong>
@@ -239,6 +241,7 @@ app.innerHTML = `
                 <th scope="col">Organización</th>
                 <th scope="col">Proyecto o actividad</th>
                 <th scope="col">Tutor empresarial</th>
+                <th scope="col">Sector</th>
                 <th scope="col">Ubicación</th>
               </tr>
             </thead>
@@ -263,9 +266,9 @@ const state: FilterState = {
   theme: ALL_FILTER,
   city: ALL_FILTER,
   department: ALL_FILTER,
+  sector: ALL_FILTER,
 };
 let dataset: LoadedDataset;
-let globalQuality: DataQuality;
 
 function setOptions(select: HTMLSelectElement, options: Array<{ value: string; label: string }>) {
   select.innerHTML = [
@@ -284,8 +287,8 @@ function render() {
 
   element<HTMLElement>("#kpi-placements").textContent = formatter.format(metrics.placements);
   element<HTMLElement>("#kpi-companies").textContent = formatter.format(metrics.companies);
-  element<HTMLElement>("#kpi-duration").textContent = metrics.medianDuration ? `${metrics.medianDuration} días` : "Sin dato";
-  const placementScope = filterRecords(dataset.records, { ...state, companyKey: ALL_FILTER, theme: ALL_FILTER, city: ALL_FILTER, department: ALL_FILTER });
+  element<HTMLElement>("#kpi-duration").textContent = metrics.averageDuration ? `${metrics.averageDuration} días` : "Sin dato";
+  const placementScope = filterRecords(dataset.records, { ...state, companyKey: ALL_FILTER, theme: ALL_FILTER, city: ALL_FILTER, department: ALL_FILTER, sector: ALL_FILTER });
   const placementRate = calculateMetrics(placementScope, dataset.records).placementRate;
   element<HTMLElement>("#kpi-placement").textContent = placementRate !== null ? `${placementRate}%` : "Sin dato";
   element<HTMLElement>("#kpi-placement-rate").textContent = placementRate !== null
@@ -295,13 +298,6 @@ function render() {
   element<HTMLElement>("#insights").innerHTML = metrics.insights
     .map((insight, index) => `<p><span>0${index + 1}</span>${insight}</p>`)
     .join("");
-
-  element<HTMLElement>("#quality-score").textContent = `${globalQuality.completeness}%`;
-  element<HTMLElement>("#quality-progress").style.width = `${globalQuality.completeness}%`;
-  element<HTMLElement>("#quality-start").textContent = String(globalQuality.missingStart);
-  element<HTMLElement>("#quality-end").textContent = String(globalQuality.missingEnd);
-  element<HTMLElement>("#quality-duration").textContent = String(globalQuality.invalidDuration);
-  element<HTMLElement>("#quality-mismatch").textContent = String(globalQuality.reportedMismatch);
 
   const period = metrics.semesterTrend;
   element<HTMLElement>("#period-range").textContent = period.length
@@ -317,6 +313,7 @@ function render() {
     state.theme !== ALL_FILTER ? state.theme : "",
     state.department !== ALL_FILTER ? state.department : "",
     state.city !== ALL_FILTER ? state.city : "",
+    state.sector !== ALL_FILTER ? state.sector : "",
   ].filter(Boolean);
   active.hidden = labels.length === 0;
   active.innerHTML = labels.length
@@ -327,6 +324,7 @@ function render() {
     semester: (value) => updateFilter("semester", value),
     company: (value) => updateFilter("companyKey", value),
     theme: (value) => updateFilter("theme", value),
+    sector: (value) => updateFilter("sector", value),
   });
   renderGeographicMap(filtered, (value) => updateFilter("city", value));
 }
@@ -359,17 +357,23 @@ function bindControls() {
     state.city = (event.target as HTMLSelectElement).value;
     render();
   });
+  element<HTMLSelectElement>("#sector-filter").addEventListener("change", (event) => {
+    state.sector = (event.target as HTMLSelectElement).value;
+    render();
+  });
   element<HTMLButtonElement>("#reset-filters").addEventListener("click", () => {
     state.semester = ALL_FILTER;
     state.companyKey = ALL_FILTER;
     state.theme = ALL_FILTER;
     state.department = ALL_FILTER;
     state.city = ALL_FILTER;
+    state.sector = ALL_FILTER;
     element<HTMLSelectElement>("#semester-filter").value = ALL_FILTER;
     element<HTMLSelectElement>("#company-filter").value = ALL_FILTER;
     element<HTMLSelectElement>("#theme-filter").value = ALL_FILTER;
     element<HTMLSelectElement>("#department-filter").value = ALL_FILTER;
     element<HTMLSelectElement>("#city-filter").value = ALL_FILTER;
+    element<HTMLSelectElement>("#sector-filter").value = ALL_FILTER;
     render();
   });
 }
@@ -377,7 +381,6 @@ function bindControls() {
 async function start() {
   initializeDirectory();
   dataset = await loadDataset();
-  globalQuality = calculateMetrics(dataset.records).quality;
   const options = filterOptions(dataset.records);
   setOptions(
     element<HTMLSelectElement>("#semester-filter"),
@@ -398,6 +401,10 @@ async function start() {
   setOptions(
     element<HTMLSelectElement>("#theme-filter"),
     options.themes.map((theme) => ({ value: theme, label: theme })),
+  );
+  setOptions(
+    element<HTMLSelectElement>("#sector-filter"),
+    options.sectors.map((sector) => ({ value: sector, label: sector })),
   );
 
   const dot = element<HTMLElement>("#status-dot");

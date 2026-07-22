@@ -1,5 +1,5 @@
 import * as echarts from "echarts/core";
-import { BarChart, LineChart } from "echarts/charts";
+import { BarChart } from "echarts/charts";
 import {
   DatasetComponent,
   GridComponent,
@@ -12,7 +12,6 @@ import type { DashboardMetrics } from "./types";
 
 echarts.use([
   BarChart,
-  LineChart,
   DatasetComponent,
   GridComponent,
   LegendComponent,
@@ -26,7 +25,19 @@ const TEXT = "#29364d";
 const MUTED = "#718096";
 const GRID = "#e8edf4";
 
-type ChartName = "trend" | "companies" | "themes" | "continuity";
+const SECTOR_LABELS: Record<string, string> = {
+  "Educación, ciencia e innovación": "Educación",
+  "Industria y manufactura": "Industria y manufactura",
+  "Tecnología, ingeniería y automatización": "Tecnología",
+  "Agroindustria y alimentos": "Agroindustria y alimentos",
+  "Energía, ambiente y servicios públicos": "Energía y ambiente",
+  "Construcción e infraestructura": "Infraestructura",
+  "Salud y tecnología biomédica": "Salud y biomedicina",
+  "Sector público y desarrollo social": "Sector público",
+  "Consultoría y servicios profesionales": "Consultoría profesional",
+};
+
+type ChartName = "trend" | "companies" | "themes" | "continuity" | "sectors";
 const charts = new Map<ChartName, echarts.ECharts>();
 
 function chart(name: ChartName): echarts.ECharts {
@@ -64,6 +75,7 @@ export function renderCharts(
     semester: (value: string) => void;
     company: (value: string) => void;
     theme: (value: string) => void;
+    sector: (value: string) => void;
   },
 ) {
   const trend = chart("trend");
@@ -88,16 +100,6 @@ export function renderCharts(
           barMaxWidth: 28,
           itemStyle: { color: "#004991", borderRadius: [7, 7, 2, 2] },
         },
-        {
-          name: "Media móvil (3 sem.)",
-          type: "line",
-          data: metrics.semesterTrend.map((item) => item.movingAverage),
-          smooth: 0.35,
-          symbol: "circle",
-          symbolSize: 7,
-          lineStyle: { color: "#F08300", width: 3 },
-          itemStyle: { color: "#F08300", borderColor: "#fff", borderWidth: 2 },
-        },
       ],
     },
     true,
@@ -120,13 +122,13 @@ export function renderCharts(
           return `<strong>${params.name}</strong><br>${params.value} practicantes · ${item.semesters} semestres`;
         },
       },
-      grid: { left: 8, right: 28, top: 12, bottom: 10, containLabel: true },
+      grid: { left: 176, right: 28, top: 12, bottom: 10, containLabel: false },
       xAxis: { ...axis(), type: "value", minInterval: 1 },
       yAxis: {
         ...axis(),
         type: "category",
         data: companyData.map((item) => item.name),
-        axisLabel: { ...axis().axisLabel, width: 150, overflow: "truncate" },
+        axisLabel: { ...axis().axisLabel, width: 160, overflow: "truncate" },
       },
       series: [
         {
@@ -150,13 +152,13 @@ export function renderCharts(
     {
       color: COLORS,
       tooltip: { ...tooltip(), trigger: "axis", valueFormatter: (value: unknown) => `${value} proyectos` },
-      grid: { left: 8, right: 34, top: 12, bottom: 10, containLabel: true },
+      grid: { left: 194, right: 34, top: 12, bottom: 10, containLabel: false },
       xAxis: { ...axis(), type: "value", minInterval: 1 },
       yAxis: {
         ...axis(),
         type: "category",
         data: [...metrics.themeCounts].reverse().map((item) => item.name),
-        axisLabel: { ...axis().axisLabel, width: 160, overflow: "truncate" },
+        axisLabel: { ...axis().axisLabel, width: 178, overflow: "truncate" },
       },
       series: [
         {
@@ -173,6 +175,42 @@ export function renderCharts(
   themes.off("click");
   themes.on("click", (params) => {
     if (typeof params.name === "string") handlers.theme(params.name);
+  });
+
+  const sectors = chart("sectors");
+  const sectorData = metrics.sectorCounts.slice(0, 8).reverse();
+  sectors.setOption(
+    {
+      animationDuration: 550,
+      tooltip: { ...tooltip(), trigger: "axis", valueFormatter: (value: unknown) => `${value} prácticas` },
+      grid: { left: 180, right: 34, top: 10, bottom: 10, containLabel: false },
+      xAxis: { ...axis(), type: "value", minInterval: 1 },
+      yAxis: {
+        ...axis(),
+        type: "category",
+        data: sectorData.map((item) => item.name),
+        axisLabel: {
+          ...axis().axisLabel,
+          width: 165,
+          overflow: "truncate",
+          formatter: (value: string) => SECTOR_LABELS[value] ?? value,
+        },
+      },
+      series: [
+        {
+          type: "bar",
+          data: sectorData.map((item, index) => ({ value: item.value, itemStyle: { color: COLORS[(index + 2) % COLORS.length] } })),
+          barMaxWidth: 20,
+          itemStyle: { borderRadius: [0, 7, 7, 0] },
+          label: { show: true, position: "right", color: TEXT, fontWeight: 600 },
+        },
+      ],
+    },
+    true,
+  );
+  sectors.off("click");
+  sectors.on("click", (params) => {
+    if (typeof params.name === "string") handlers.sector(params.name);
   });
 
   const continuity = chart("continuity");
